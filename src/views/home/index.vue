@@ -4,11 +4,6 @@
 	</div>
 </template>
 <script>
-	import { Button, Select } from 'element-ui';
 	export default{
-		components:[
-			Button,Select
-		]
-		
 	}
 </script>
