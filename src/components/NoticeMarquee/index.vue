@@ -2,7 +2,7 @@
   <div class="container" >
     <div ref="inner" class="inner" >
       <ul :style="{ left: listLeft + 'px' }" ref="noticeList" class="notice-list" >
-        <li ref="noticeItem" class="notice-item" v-for="(notice, index) in noticeList" :key="index" >
+        <li ref="noticeItem" class="notice-item" v-for="(notice, index) in list" :key="index" >
           <el-rate
             class="notice-item-rate"
             v-if="notice.rate"
@@ -19,26 +19,13 @@
 <script>
 export default {
   name: 'notice-marquee',
+  inheritAttrs: false,
+  props: {
+    list: Array
+  },
   data() {
     return {
-      listLeft: 0,
-      noticeList: [
-        { content: 'xxxxx', rate: 1.1 },
-        { content: 'xxxxx', rate: 2.1 },
-        { content: 'xxxxx', rate: 4.1 },
-        { content: 'xxxxx', rate: 5 },
-        { content: 'xxxxx', rate: 1 },
-        { content: 'xxxxx, xxxxx', rate: 3 },
-        { content: 'xxxxx', rate: 4 },
-        { content: 'xxxxx', rate: 2 },
-        { content: 'xxxxx', rate: 5 },
-        { content: 'xxxxx', rate: 1 },
-        { content: 'xxxxx', rate: 1 },
-        { content: 'xxxxx', rate: 5 },
-        { content: 'xxxxx', rate: 5 },
-        { content: 'xxxxx', rate: 5 },
-        { content: 'xxxxx', rate: 5 }
-      ]
+      listLeft: 0
     }
   },
   methods: {
