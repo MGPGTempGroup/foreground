@@ -93,5 +93,6 @@
     display: flex;
     display: -webkit-flex;
     justify-content: center;
+    border-bottom: 0px;
   }
 </style>
