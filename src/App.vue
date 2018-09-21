@@ -1,5 +1,6 @@
 <template>
 	<div class="container" >
+		<header-top />
 		<navigation />
 		<router-view></router-view>
 	</div>
@@ -7,10 +8,12 @@
 
 <script>
 	import Navigation from '@/components/Nav'
+	import HeaderTop from '@/components/HeaderTop'
 	export default {
 		name: 'App',
 		components: {
-			Navigation
+			Navigation,
+			HeaderTop
 		}
 	};
 </script>
