@@ -2,14 +2,11 @@
   <el-header class="container" >
     <div class="inner-pc hidden-md-and-down" >
       <div class="inner-pc-top" >
-        <!-- Logo -->
         <div class="inner-pc-top-left" >
           <router-link to="/" >
             <img class="inner-pc-top-left-logo" src="@/assets/images/logo/logo_widthplus_transparent.png" alt="">
           </router-link>
         </div>
-
-        <!-- other -->
         <div :span="6" class="inner-pc-top-right" >
           <div class="inner-pc-top-right-temp">
             待填充区域
@@ -18,7 +15,6 @@
           </div>
         </div>
       </div>
-
       <div class="inner-pc-nav" >
         <navigation :show="true" mode="horizontal" />
       </div>
@@ -154,7 +150,6 @@
           }
         }
       }
-      
       &-nav {
         height: auto;
       }
