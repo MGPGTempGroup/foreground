@@ -57,9 +57,14 @@
 	};
 </script>
 
-<style lang="scss" >
-	.router-view {
-		min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
+<style scoped lang="scss" >
+	.container {
+		.router-view {
+			margin: 0 auto;
+			max-width: 1263px;
+			height: 600px;
+			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
+		}
 	}
 </style>
 

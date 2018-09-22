@@ -1,9 +1,9 @@
 <template>
-  <nav class="container" >
+  <nav v-show="show" class="container" >
     <el-menu
       :default-active="activeIndex"
       class="el-menu-container"
-      mode="horizontal"
+      :mode="mode || 'vertical'"
       @select="handleSelect"
       background-color="#545c64"
       text-color="#fff"
@@ -75,6 +75,13 @@
 <script>
   export default {
     name: 'navigation',
+    props: {
+      mode: String,
+      show: {
+        type: Boolean,
+        defaults: true
+      }
+    },
     data() {
       return {
         activeIndex: '1'
@@ -89,10 +96,14 @@
 </script>
 
 <style scoped lang="scss" >
+  .container {
+    background-color: #535B63;
+  }
   .el-menu-container {
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
+    margin: 0 auto;
     border-bottom: 0px;
+  }
+  .el-menu {
+    border-right: 0px;
   }
 </style>

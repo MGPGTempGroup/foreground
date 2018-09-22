@@ -1,5 +1,5 @@
 <template>
-  <div class="container" >
+  <div class="container hidden-md-and-down" >
     <div ref="inner" class="inner" >
       <ul :style="{ left: listLeft + 'px' }" ref="noticeList" class="notice-list" >
         <li ref="noticeItem" class="notice-item" v-for="(notice, index) in list" :key="index" >
