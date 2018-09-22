@@ -101,7 +101,7 @@
   }
   .el-menu-container {
     margin: 0 auto;
-    border-bottom: 0px;
+    border-bottom: 0px !important;
   }
   .el-menu {
     border-right: 0px;
