@@ -1,13 +1,25 @@
 <template>
 	<main class="container">
-		<div class="carousel">
-			<el-carousel class="carousel" :interval="5000" height="500px">
-				<el-carousel-item class="carousel-item" v-for="item in 4" :key="item">
-					<img src="@/assets/images/banner/Home_Hero_1.1.gif" alt="">
-					<h2>&nbsp;One step ahead.</h2>
-				</el-carousel-item>
-			</el-carousel>
-		</div>
+		<swiper :options="swiperOption" class="main-swiper">
+			<swiper-slide><img src="@/assets/images/banner/Home_Hero_1.1.gif">
+				<h2>&nbsp;One step ahead.</h2>
+			</swiper-slide>
+
+			<swiper-slide><img src="@/assets/images/banner/Home_Hero_1.1.gif">
+				<h2>&nbsp;One step ahead.</h2>
+			</swiper-slide>
+
+			<swiper-slide><img src="@/assets/images/banner/Home_Hero_1.1.gif">
+				<h2>&nbsp;One step ahead.</h2>
+			</swiper-slide>
+
+			<swiper-slide><img src="@/assets/images/banner/Home_Hero_1.1.gif">
+				<h2>&nbsp;One step ahead.</h2>
+			</swiper-slide>
+			<div class="swiper-pagination" slot="pagination"></div>
+			<div class="swiper-button-prev" slot="button-prev"></div>
+			<div class="swiper-button-next" slot="button-next"></div>
+		</swiper>
 		<el-row :gutter="20">
 			<house-box v-for="(item,index) in 3" :key="index"></house-box>
 		</el-row>
@@ -30,38 +42,58 @@
 			MainBox,
 			StaffBox
 		},
+		data() {
+			return {
+				swiperOption: {
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+						bulletClass: 'my-bullet',
+						bulletActiveClass: 'my-bullet-active'
+					}
+				}
+			}
+		},
 		name: 'awagegedemo'
 	}
 </script>
 
 <style scoped lang="scss">
 	.container {
-		.carousel {
-			margin: 0 auto;
-			margin-top: 50px;
+		.swiper-container {
+			width: 100%;
 
-			&-item {
+			.swiper-slide {
 				img {
 					width: 100%;
-					height: 100%;
 				}
 
 				h2 {
 					position: absolute;
-					top: 140px;
-					z-index: 100;
+					top: 50%;
 					width: 100%;
-					text-align: center;
-					font-size: 50px;
-					letter-spacing: 2px;
-					text-shadow: 2px 2px 10px black;
+					z-index: 100;
+					margin: 0;
+					font-size: 312.5%;
 					color: white;
+					text-align: center;
+					line-height: 50px;
+					margin-top: -25px;
 				}
 			}
+
+			.swiper-pagination {
+				.my-bullet {
+					width: 100px;
+					height: 8px;
+					background: #fff;
+				}
+
+				.my-bullet-active {
+					background: #eee;
+				}
+			}
+
 		}
 	}
-</style>
-
-
-<style>
 </style>
