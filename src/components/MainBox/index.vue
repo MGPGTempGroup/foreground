@@ -1,5 +1,5 @@
 <template>
-	<el-col :sm="12" :md="8" :lg="8" class="container">
+	<div class="container" >
 		<div class="head">
 			<div class="title">Looking to Rent?</div>
 			<el-popover placement="bottom-end" trigger="hover" style="width: 100px;">
@@ -20,7 +20,6 @@
 				</ul>
 				<i class="el-icon-more" slot="reference"></i>
 			</el-popover>
-
 		</div>
 		<div class="main">
 			<div class="img-box">
@@ -32,7 +31,7 @@
 				Read More
 			</font>
 		</div>
-	</el-col>
+	</div>
 </template>
 <script>
 	export default {
