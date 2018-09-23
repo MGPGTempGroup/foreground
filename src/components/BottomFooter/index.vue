@@ -7,7 +7,7 @@
             <img src="@/assets/images/footer/Borderlessx500.png" alt="">
           </a>
         </el-col>
-        <el-col :xs="10" :sm="16" :md="16" :lg="14" >
+        <el-col :xs="10" :sm="16" :md="16" :lg="12" >
           <el-row>
             <el-col class="desc-inner-item" :xs="24" :sm="12" :lg="12">
               <h5>Site</h5>
@@ -66,7 +66,7 @@
     </section>
     <section class="info" >
       <el-row class="info-inner" >
-        <el-col :xs="12" :sm="12" :lg="8" class="info-inner-section">
+        <el-col :xs="12" :sm="12" :lg="7" class="info-inner-section">
           <address >
             <p>12 Yarra Street <br>
             South Yarra, VIC 3141 <br>
@@ -74,14 +74,14 @@
             Facsimile +61 3 9829 2966</p>
           </address>
         </el-col>
-        <el-col :xs="12" :sm="12" :lg="8" class="info-inner-section">
+        <el-col :xs="12" :sm="12" :lg="6" class="info-inner-section">
           <address >
             <p>EQ Tower<br>
             131 A’Beckett Street<br>
             Melbourne VIC 3000</p>
           </address>
         </el-col>
-        <el-col :xs="12" :sm="12" :lg="8" class="info-inner-section">
+        <el-col :xs="12" :sm="12" :lg="6" class="info-inner-section">
           <ul>
             <li>
               <a href="mailto:sales@melbournerealestate.com.au">Email Melbourne Sales</a>
@@ -113,6 +113,7 @@
 
 <style scoped lang="scss" >
   @import '@/assets/sass/mixins/transition.scss';
+  @import '@/assets/sass/mixins/responsive.scss';
   .container {
     > section {
       padding: 0px 30px !important;
@@ -152,11 +153,10 @@
       background-color: black;
       &-inner {
         margin: 0 auto;
-        padding: 40px 0px 20px 0px;
+        padding: 40px 0px 40px 0px;
         max-width: 1200px;
         width: 100%;
         &-section {
-          padding-left: 35px;
           min-height: 180px;
           > address {
             display: block;
@@ -173,6 +173,21 @@
               &:hover {
                 color: rgba(255,255,255,.6);
               }
+            }
+          }
+          @include media-lg-up {
+            padding-left: 20px;
+            &:nth-of-type(2) {
+              padding-left: 67px;
+            }
+            &:nth-of-type(3) {
+              padding-left: 44px;
+            }
+          }
+          @include media-md-down {
+            padding-left: 30px;
+            &:nth-of-type(2) {
+              padding-left: 30px;
             }
           }
         }

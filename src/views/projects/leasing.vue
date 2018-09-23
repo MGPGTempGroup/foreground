@@ -78,6 +78,7 @@
 </script>
 
 <style scoped lang="scss" >
+  @import '@/assets/sass/mixins/responsive.scss';
   .leasing {
     padding-bottom: 33px;
     .carousel {
@@ -102,11 +103,16 @@
     }
     &-content, &-form {
       margin-top: 30px;
+      @include media-md-down {
+        padding: 0px 10px;
+      }
     }
     &-content {
-      padding-right: 32px;
       > * {
         padding: 10px 10px;
+      }
+      @include media-lg-up {
+        padding-right: 32px;
       }
     }
   }

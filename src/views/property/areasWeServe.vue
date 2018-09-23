@@ -8,29 +8,31 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-    <el-card>
-      <el-row class="content" >
-        <el-col class="content-desc">
-          <p>
-            At Melbourne Real Estate we understand that when you are looking to buy, rent or invest in real estate it’s a big decision. It is important to know and understand not only the market place but also who lives in the area, what schools, public transport and activities the areas has to offer.
-          </p>
-          <p>
-            Below you will find a selection of some of Melbourne’s best suburbs, to see a full list of areas we serve Click Here. If you have any questions, feel free to contact one of our agents!
-          </p>
-        </el-col>
-      </el-row>
-      <!-- 服务地区列表 -->
-      <el-row tag="ul" class="areas-list" >
-        <el-col
-          class="areas-list-item"
-          v-for="(item, index) in 6"
-          :key="index"
-          tag="li"
-          :xs="24" :sm="12" :md="8" :lg="8" >
-          <main-box />
-        </el-col>
-      </el-row>
-    </el-card>
+    <div class="content">
+      <el-card class="content-inner">
+        <el-row class="content-desc" >
+          <el-col class="content-inner-desc">
+            <p>
+              At Melbourne Real Estate we understand that when you are looking to buy, rent or invest in real estate it’s a big decision. It is important to know and understand not only the market place but also who lives in the area, what schools, public transport and activities the areas has to offer.
+            </p>
+            <p>
+              Below you will find a selection of some of Melbourne’s best suburbs, to see a full list of areas we serve Click Here. If you have any questions, feel free to contact one of our agents!
+            </p>
+          </el-col>
+        </el-row>
+        <!-- 服务地区列表 -->
+        <el-row tag="ul" class="areas-list" >
+          <el-col
+            class="areas-list-item"
+            v-for="(item, index) in 6"
+            :key="index"
+            tag="li"
+            :xs="24" :sm="12" :md="8" :lg="8" >
+            <main-box />
+          </el-col>
+        </el-row>
+      </el-card>
+    </div>
   </div>
 </template>
 
@@ -69,27 +71,32 @@
       }
     }
     .content {
-      margin-top: 20px;
-      &-desc {
-        > p {
-          font-size: 18px;
-          color: #343434;
-        }
-        @include media-xs {
-          padding: 0px 25px !important;
-        }
-        @include media-sm {
-          padding: 0px 30px !important;
-        }
-        @include media-md {
-          padding: 0px 40px !important;
-        }
-        @include media-custom(1200px, 1330px) {
-          padding: 0px 30px !important;
-        }
-        @include media-sm-down {
-          img {
-            width: 100%;
+      @include media-md-down {
+        padding: 0px 10px;
+      }
+      &-inner {
+        margin-top: 20px;
+        &-desc {
+          > p {
+            font-size: 18px;
+            color: #343434;
+          }
+          @include media-xs {
+            padding: 0px 10px !important;
+          }
+          @include media-sm {
+            padding: 0px 20px !important;
+          }
+          @include media-md {
+            padding: 0px 20px !important;
+          }
+          @include media-custom(1200px, 1330px) {
+            padding: 0px 30px !important;
+          }
+          @include media-sm-down {
+            img {
+              width: 100%;
+            }
           }
         }
       }

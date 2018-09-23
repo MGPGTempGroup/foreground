@@ -75,6 +75,9 @@
     }
     .content {
       margin-top: 33px;
+      @include media-xs {
+        padding: 0px 10px !important;
+      }
       @include media-sm {
         padding: 0px 30px !important;
       }
@@ -83,7 +86,7 @@
       }
       &-desc {
         &-inner {
-          padding: 0px 20px;
+          padding: 0px 10px;
           @include media-sm-down {
             img {
               width: 100%;

@@ -48,6 +48,7 @@
 </script>
 
 <style scoped lang="scss" >
+  @import '@/assets/sass/mixins/responsive.scss';
   .commercial {
     padding-bottom: 33px;
     .carousel {
@@ -72,11 +73,19 @@
     }
     &-content, &-form {
       margin-top: 30px;
+      @include media-md-down {
+        padding: 0px 10px !important;
+      }
     }
     &-content {
       padding-right: 32px;
       > * {
         padding: 10px 10px;
+      }
+      @include media-sm-down {
+        img {
+          width: 100%;
+        }
       }
     }
   }
