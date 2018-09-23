@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import home from '@/views/home'
 import awagegedemo from '@/views/awagegedemo'
 import landlords from '@/views/property/landlords'
+import prospectiveTenants from '@/views/property/prospectiveTenants'
+
 Vue.use(Router)
 export default new Router({
 	mode: 'history',
@@ -14,8 +16,13 @@ export default new Router({
 	},
 	{
 		path: '/landlords',
-		name: 'home',
+		name: 'landlords',
 		component: landlords
+	},
+	{
+		path: '/prospective-tenants',
+		name: 'prospectiveTenants',
+		component: prospectiveTenants
 	},
 	{
 		path: '/awagegedemo',
