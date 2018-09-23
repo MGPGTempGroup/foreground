@@ -37,6 +37,7 @@
 
 <style scoped lang="scss" >
   .careers {
+    @import '@/assets/sass/mixins/responsive.scss';
     padding-bottom: 33px;
     .carousel {
       margin: 0 auto;
@@ -65,6 +66,9 @@
       padding-right: 32px;
       > * {
         padding: 10px 10px;
+      }
+      @include media-md-down {
+        padding: 0px 10px;
       }
     }
     &-contacts {

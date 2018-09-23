@@ -43,6 +43,7 @@
 </script>
 
 <style scoped lang="scss" >
+  @import '@/assets/sass/mixins/responsive.scss';
   .contact-us {
     padding-bottom: 33px;
     .carousel {
@@ -67,6 +68,9 @@
     }
     &-content, &-contacts {
       margin-top: 30px;
+      @include media-md-down {
+        padding: 0px 10px !important;
+      }
     }
     &-content {
       padding-right: 32px;

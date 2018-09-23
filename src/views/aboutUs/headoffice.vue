@@ -75,7 +75,10 @@
       margin-top: 33px;
       &-desc {
         &-inner {
-          padding: 10px 20px;
+          padding: 10px 10px;
+        }
+        @include media-md-down {
+          padding: 0px 10px;
         }
         @include media-sm-down {
           img {
