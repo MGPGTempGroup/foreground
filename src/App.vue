@@ -60,6 +60,7 @@
 <style scoped lang="scss" >
 	.container {
 		.router-view {
+			padding-top: 30px;
 			margin: 0 auto;
 			max-width: 1263px;
 			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
