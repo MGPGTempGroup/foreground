@@ -48,19 +48,19 @@ export default {
         comment: '',
         options: [{
           value: '选项1',
-          label: '黄金糕'
+          label: 'Landlords'
         }, {
           value: '选项2',
-          label: '双皮奶'
+          label: 'Tenand'
         }, {
           value: '选项3',
-          label: '蚵仔煎'
+          label: 'Purchaser'
         }, {
           value: '选项4',
-          label: '龙须面'
+          label: 'Vendor'
         }, {
           value: '选项5',
-          label: '北京烤鸭'
+          label: 'Other'
         }],
       },
     }
