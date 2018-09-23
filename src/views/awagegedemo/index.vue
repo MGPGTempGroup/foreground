@@ -9,6 +9,9 @@
 			</el-carousel>
 		</div>
 		<el-row :gutter="20">
+			<house-box v-for="(item,index) in 3" :key="index"></house-box>
+		</el-row>
+		<el-row :gutter="20">
 			<staff-box v-for="(item,index) in 4" :key="index"></staff-box>
 		</el-row>
 		<el-row :gutter="20">
@@ -18,11 +21,14 @@
 </template>
 
 <script>
- import MainBox from '@/components/MainBox'
- import StaffBox from '@/components/StaffBox'
+	import HouseBox from '@/components/HouseBox'
+	import MainBox from '@/components/MainBox'
+	import StaffBox from '@/components/StaffBox'
 	export default {
-		components:{
-			MainBox,StaffBox
+		components: {
+			HouseBox,
+			MainBox,
+			StaffBox
 		},
 		name: 'awagegedemo'
 	}
