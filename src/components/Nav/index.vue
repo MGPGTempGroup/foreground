@@ -53,9 +53,21 @@
 			<el-menu-item index="7">
 				<router-link tag="li" to="/contact-us"> Contact Us </router-link>
 			</el-menu-item>
-			<el-menu-item index="8">
-				<router-link tag="li" to="/about-us"> About Us </router-link>
-			</el-menu-item>
+			<el-submenu index="8">
+				<template slot="title"> About Us </template>
+				<el-menu-item index="8-1">
+					<router-link tag="li" to="/about-us-team">Team</router-link>
+				</el-menu-item>
+				<el-menu-item index="8-2">
+					<router-link tag="li" to="/about-us-testimonials">Testimonials</router-link>
+				</el-menu-item>
+				<el-menu-item index="8-3">
+					<router-link tag="li" to="/about-us-headoffice">headoffice</router-link>
+				</el-menu-item>
+				<el-menu-item index="8-4">
+					<router-link tag="li" to="/about-us-careers">Careers</router-link>
+				</el-menu-item>
+			</el-submenu>
 			<el-menu-item index="9">
 				<router-link tag="li" to="/industry-updates"> Industry Updates </router-link>
 			</el-menu-item>
