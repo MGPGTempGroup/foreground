@@ -30,7 +30,9 @@
         v-model="form.comment">
       </el-input>
     </el-form-item>
-    <el-button type="primary" round>Go</el-button>
+    <el-form-item class="submit" >
+      <el-button class="submit-btn" type="primary" round>Go</el-button>
+    </el-form-item>
   </el-form>
 </template>
 
@@ -71,9 +73,19 @@ export default {
 <style scoped lang="scss" >
   .container {
     width: 100%;
-  }
-  .el-form-item {
-    margin-bottom: 8px;
+    .el-form-item {
+      margin-bottom: 8px;
+    }
+    .submit {
+      // 临时方法
+      margin-top: 20px;
+      margin-bottom: 0px;
+      height: 40px;
+      &-btn {
+        position: absolute;
+        right: 0px;
+      }
+    }
   }
 </style>
 
