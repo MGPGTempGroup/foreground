@@ -92,8 +92,11 @@
     .content {
       margin-top: 33px;
       &-desc {
+        @include media-md-down {
+          padding: 0px 10px;
+        }
         &-inner {
-          padding: 0px 20px;
+          padding: 0px 10px;
         }
         @include media-sm-down {
           img {
