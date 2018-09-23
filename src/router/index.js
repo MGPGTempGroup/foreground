@@ -14,6 +14,9 @@ import areasWeServe from '@/views/property/areasWeServe'
 import marketing from '@/views/projects/marketing'
 import leasing from '@/views/projects/leasing'
 
+// 商业/广告相关页面
+import commercial from '@/views/commercial'
+
 Vue.use(Router)
 export default new Router({
 	mode: 'history',
@@ -52,6 +55,11 @@ export default new Router({
 			path: '/project-leasing',
 			name: 'projectLeasing',
 			component: leasing
+		},
+		{
+			path: '/commercial',
+			name: 'commercial',
+			component: commercial
 		},
 		{
 			path: '/awagegedemo',
