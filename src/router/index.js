@@ -17,6 +17,9 @@ import leasing from '@/views/projects/leasing'
 // 商业/广告相关页面
 import commercial from '@/views/commercial'
 
+// 联系我们页面
+import contactUs from '@/views/contactUs'
+
 // 关于我们相关页面
 import headoffice from '@/views/aboutUs/headoffice'
 import careers from '@/views/aboutUs/careers'
@@ -64,6 +67,11 @@ export default new Router({
 			path: '/commercial',
 			name: 'commercial',
 			component: commercial
+		},
+		{
+			path: '/contact-us',
+			name: 'contactUs',
+			component: contactUs
 		},
 		{
 			path: '/about-us-headoffice',
