@@ -8,27 +8,29 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-    <el-row class="content" >
-      <el-col class="content-desc">
-        <p>
-          At Melbourne Real Estate we understand that when you are looking to buy, rent or invest in real estate it’s a big decision. It is important to know and understand not only the market place but also who lives in the area, what schools, public transport and activities the areas has to offer.
-        </p>
-        <p>
-          Below you will find a selection of some of Melbourne’s best suburbs, to see a full list of areas we serve Click Here. If you have any questions, feel free to contact one of our agents!
-        </p>
-      </el-col>
-    </el-row>
-    <!-- 服务地区列表 -->
-    <el-row tag="ul" class="areas-list" >
-      <el-col
-        class="areas-list-item"
-        v-for="(item, index) in 6"
-        :key="index"
-        tag="li"
-        :xs="24" :sm="12" :md="8" :lg="8" >
-        <main-box />
-      </el-col>
-    </el-row>
+    <el-card>
+      <el-row class="content" >
+        <el-col class="content-desc">
+          <p>
+            At Melbourne Real Estate we understand that when you are looking to buy, rent or invest in real estate it’s a big decision. It is important to know and understand not only the market place but also who lives in the area, what schools, public transport and activities the areas has to offer.
+          </p>
+          <p>
+            Below you will find a selection of some of Melbourne’s best suburbs, to see a full list of areas we serve Click Here. If you have any questions, feel free to contact one of our agents!
+          </p>
+        </el-col>
+      </el-row>
+      <!-- 服务地区列表 -->
+      <el-row tag="ul" class="areas-list" >
+        <el-col
+          class="areas-list-item"
+          v-for="(item, index) in 6"
+          :key="index"
+          tag="li"
+          :xs="24" :sm="12" :md="8" :lg="8" >
+          <main-box />
+        </el-col>
+      </el-row>
+    </el-card>
   </div>
 </template>
 
@@ -45,7 +47,7 @@
 <style scoped lang="scss" >
   @import '@/assets/sass/mixins/responsive.scss';
   .areas-we-serve {
-    padding: 35px 0px 70px 0px;
+    padding-bottom: 70px;
     .carousel {
       margin: 0 auto;
       &-item {
@@ -93,7 +95,12 @@
       }
     }
     .areas-list {
+      margin-top: 20px;
+      padding-bottom: 20px;
       &-item {
+        > * {
+          box-shadow: 0px 0px 10px #ccc;
+        }
         @include media-xs {
           padding: 0px 20px;
         }
@@ -111,15 +118,7 @@
         }
         @include media-lg {
           padding: 0px 10px;
-          &:nth-of-type(3n) {
-            padding-right: 0px;  
-          }
-          &:nth-of-type(2n) {
-            padding: 0px 10px;
-          }
-          &:nth-of-type(3n + 1) {
-            padding-left: 0px;
-          }
+          
         }
         @include media-custom(1200px, 1300px) {
           padding: 0px 20px !important;

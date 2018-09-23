@@ -8,7 +8,7 @@
     </el-carousel>
     <el-row class="content" >
       <el-col class="content-desc" :md="24" :lg="17" >
-        <el-card>
+        <el-card class="content-desc-inner" >
           <p><strong>Property Management Landlord Services</strong></p>
           <p>Melbourne Real Estate has turned the industry standard of property management on its head.</p>
           <p>Since 2006, we’ve won six state-wide awards from the Real Estate Institute of Victoria recognising outstanding achievement in all areas of real estate practice, including consecutive titles for &nbsp;Property Management Business of the year in 2014 and 2015, and BDM of the Year in 2014.</p>
@@ -75,9 +75,6 @@
     }
     .content {
       margin-top: 33px;
-      @include media-xs {
-        padding: 0px 25px !important;
-      }
       @include media-sm {
         padding: 0px 30px !important;
       }
@@ -85,18 +82,16 @@
         padding: 0px 40px !important;
       }
       &-desc {
-        @include media-sm-down {
-          img {
-            width: 100%;
+        &-inner {
+          padding: 0px 20px;
+          @include media-sm-down {
+            img {
+              width: 100%;
+            }
           }
         }
         @include media-lg-up {
           padding-right: 20px;
-        }
-      }
-      > * {
-        @include media-custom(1200px, 1263px) {
-          padding: 0px 30px !important;
         }
       }
       &-form {
