@@ -19,6 +19,7 @@ import commercial from '@/views/commercial'
 
 // 关于我们相关页面
 import headoffice from '@/views/aboutUs/headoffice'
+import careers from '@/views/aboutUs/careers'
 
 Vue.use(Router)
 export default new Router({
@@ -68,6 +69,11 @@ export default new Router({
 			path: '/about-us-headoffice',
 			name: 'headoffice',
 			component: headoffice
+		},
+		{
+			path: '/about-us-careers',
+			name: 'careers',
+			component: careers
 		},
 		{
 			path: '/awagegedemo',

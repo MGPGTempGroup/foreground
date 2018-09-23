@@ -1,7 +1,7 @@
 <template>
   <el-card class="box-card">
     <div slot="header">
-      <h3 style="margin: 0px;" >Contacts</h3>
+      <h3 style="margin: 0px;" >{{ title }}</h3>
     </div>
     <ul class="contact-list" v-if="contactList" >
       <li v-for="(item, index) in contactList" :key="index" >
@@ -22,7 +22,11 @@
 export default {
   name: 'contacts',
   props: {
-    contactList: Object // { "Georgina Mellick — Project Sales Director": ['contact 1', 'contact 2'] }
+    contactList: Object, // { "Georgina Mellick — Project Sales Director": ['contact 1', 'contact 2'] }
+    title: {
+      type: String,
+      default: 'Contacts'
+    }
   }
 }
 </script>
