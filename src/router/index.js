@@ -12,6 +12,7 @@ import areasWeServe from '@/views/property/areasWeServe'
 
 // 方案/项目相关页面
 import marketing from '@/views/projects/marketing'
+import leasing from '@/views/projects/leasing'
 
 Vue.use(Router)
 export default new Router({
@@ -46,6 +47,11 @@ export default new Router({
 			path: '/project-marketing',
 			name: 'projectMarketing',
 			component: marketing
+		},
+		{
+			path: '/project-leasing',
+			name: 'projectLeasing',
+			component: leasing
 		},
 		{
 			path: '/awagegedemo',
