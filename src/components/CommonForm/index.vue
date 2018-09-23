@@ -70,7 +70,7 @@ export default {
 
 <style scoped lang="scss" >
   .container {
-    width: 350px;
+    width: 100%;
   }
   .el-form-item {
     margin-bottom: 8px;
