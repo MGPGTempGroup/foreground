@@ -17,6 +17,9 @@ import leasing from '@/views/projects/leasing'
 // 商业/广告相关页面
 import commercial from '@/views/commercial'
 
+// 关于我们相关页面
+import headoffice from '@/views/aboutUs/headoffice'
+
 Vue.use(Router)
 export default new Router({
 	mode: 'history',
@@ -60,6 +63,11 @@ export default new Router({
 			path: '/commercial',
 			name: 'commercial',
 			component: commercial
+		},
+		{
+			path: '/about-us-headoffice',
+			name: 'headoffice',
+			component: headoffice
 		},
 		{
 			path: '/awagegedemo',
