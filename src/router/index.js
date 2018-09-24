@@ -14,6 +14,9 @@ import areasWeServe from '@/views/property/areasWeServe'
 import marketing from '@/views/projects/marketing'
 import leasing from '@/views/projects/leasing'
 
+// 租房
+import renting from '@/views/renting'
+
 // 商业/广告相关页面
 import commercial from '@/views/commercial'
 
@@ -24,6 +27,7 @@ import contactUs from '@/views/contactUs'
 import headoffice from '@/views/aboutUs/headoffice'
 import careers from '@/views/aboutUs/careers'
 import team from '@/views/aboutUs/team'
+import testimonials from '@/views/aboutUs/testimonials'
 
 Vue.use(Router)
 export default new Router({
@@ -87,6 +91,15 @@ export default new Router({
 			path: '/about-us-team',
 			name: 'team',
 			component: team
+		},{
+			path: '/about-us-testimonials',
+			name: 'testimonials',
+			component: testimonials
+		},
+		,{
+			path: '/renting',
+			name: 'renting',
+			component: renting
 		},
 		{
 			path: '/awagegedemo',

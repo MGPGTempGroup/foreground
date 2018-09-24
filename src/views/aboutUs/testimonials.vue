@@ -1,35 +1,20 @@
 <template>
-	<main class="team">
+	<main class="testimonials">
 		<div class="top-info">
 			<div class="text" ref="text">
-				An award winning team of<br>
-				industry professionals that promise<br>
-				to deliver wow service.
+				“To avoid criticism say nothing,<br>
+				do nothing, be nothing.”<br>
+				<small>Aristotle</small>
 			</div>
 		</div>
-		<div class="content" v-for="(item,index) in 4" :key="index">
-			<div class="title">
-				Corporate
-			</div>
-			<el-row>
-				<staff-box v-for="(item,index) in 5" :key="index"></staff-box>
-			</el-row>
-		</div>
+
 	</main>
 </template>
 <script>
-	import StaffBox from '@/components/StaffBox'
 	export default {
-		name: 'team-page',
-		components:{
-			StaffBox
-		},
+		name: 'testimonials-page',
 		data() {
-			return {
-				staffData:{
-					
-				}
-			}
+			return {}
 		},
 		methods: {
 
@@ -49,7 +34,7 @@
 	}
 </script>
 <style scoped lang="scss">
-	.team {
+	.testimonials {
 		.top-info {
 			position: relative;
 			width: 100%;
@@ -66,14 +51,21 @@
 				font-size: 30px;
 				line-height: 40px;
 				font-weight: 800;
+
+				small {
+					font-size: 14px;
+					font-weight: 400;
+				}
 			}
 
 		}
-		.content{
+
+		.content {
 			border-bottom: 1px #aaa solid;
-			margin:20px 0;
+			margin: 20px 0;
 			padding-bottom: 30px;
-			.title{
+
+			.title {
 				font-size: 20px;
 				font-weight: 800;
 				line-height: 40px;
