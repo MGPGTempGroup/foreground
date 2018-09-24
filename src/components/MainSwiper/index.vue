@@ -35,6 +35,7 @@
 		data() {
 			return {
 				swiperOption: {
+					autoplay: true,
 					loop: true,
 					pagination: {
 						el: '.swiper-pagination',
@@ -54,7 +55,7 @@
 <style lang="scss">
 	.main-swiper {
 		width: 100%;
-
+		height: 500px;
 		.swiper-slide {
 			img {
 				width: 100%;
@@ -82,7 +83,8 @@
 			background: #fff;
 			opacity: .3;
 		}
-		.my-bullet-active{
+
+		.my-bullet-active {
 			opacity: 1;
 		}
 

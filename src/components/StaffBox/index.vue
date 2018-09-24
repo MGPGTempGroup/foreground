@@ -13,7 +13,7 @@
 				Read More
 			</font>
 			<div class="presentation">
-				Founder and chairman of xiaomi technology
+				Founder and chairman of xiaomi technology Founder and chairman of xiaomi technology
 			</div>
 		</div>
 	</el-col>
@@ -29,8 +29,10 @@
 	}
 </script>
 <style scoped lang="scss">
+	@import '@/assets/sass/mixins/responsive.scss';
+
 	.container {
-		margin: 10px 0;
+		padding:10px;
 		cursor: pointer;
 
 		.main {
@@ -74,7 +76,11 @@
 				color: #666;
 			}
 			>.presentation{
+				height: 60px;
+				padding-bottom: 10px;
+				line-height: 30px;
 				font-size: 12px;
+				overflow: hidden;
 			}
 		}
 
