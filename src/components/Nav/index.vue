@@ -72,7 +72,7 @@
 				<router-link tag="li" to="/industry-updates"> Industry Updates </router-link>
 			</el-menu-item>
 			<el-menu-item index="10">
-				<router-link tag="li" to="/custom"> 说您的语言 </router-link>
+				<router-link tag="li" to="/we-speak-your-language"> 说您的语言 </router-link>
 			</el-menu-item>
 		</el-menu>
 	</nav>

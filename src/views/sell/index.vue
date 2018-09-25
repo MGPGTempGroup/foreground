@@ -1,11 +1,11 @@
 <template>
 	<div class="selling">
-		<el-carousel class="carousel" :interval="5000" height="500px">
-			<el-carousel-item class="carousel-item" v-for="item in 4" :key="item">
-				<img src="@/assets/images/banner/Home_Hero_1.1.gif" alt="">
-				<h2>&nbsp;One step ahead.</h2>
-			</el-carousel-item>
-		</el-carousel>
+		<div class="img-box">
+			<img src="https://www.melbournerealestate.com.au/wp-content/uploads/2014/05/Sell_Hero.jpg">
+			<div class="text" ref="text">
+				Selling is our specialty.
+			</div>
+		</div>
 		<el-row class="content">
 			<el-col class="content-desc" :md="24" :lg="17">
 				<el-card class="content-desc-inner">
@@ -30,8 +30,10 @@
 						<h3 style="margin: 0px;">Inquire about our property management service:</h3>
 					</div>
 					<common-form style="width: 100%;" />
-					<contacts-card :contactList="contactList" style="width: 100%;"/>
 				</el-card>
+			</el-col>
+			<el-col class="content-form" :md="24" :lg="7" style="float: right;margin-top: 30px;">
+					<contacts-card :contactList="contactList" style="width: 100%;" />
 			</el-col>
 
 		</el-row>
@@ -44,7 +46,8 @@
 	export default {
 		name: 'selling-page',
 		components: {
-			CommonForm
+			CommonForm,
+			ContactsCard
 		},
 		data() {
 			return {
@@ -61,6 +64,18 @@
 					}
 				}
 			}
+		},
+		created() {
+			this.$nextTick(() => {
+				let textHeight = this.$refs.text.offsetHeight
+				let marginTop = -textHeight / 2
+				Velocity(this.$refs.text, {
+					marginTop: marginTop,
+					top: '50%'
+				}, {
+					duration: 1000
+				})
+			})
 		}
 	}
 </script>
@@ -71,28 +86,35 @@
 	.selling {
 		padding-bottom: 70px;
 
-		.carousel {
-			margin: 0 auto;
+		>.img-box {
+			position: relative;
+			padding-bottom: 40%;
+			padding-left: 100%;
+			margin-bottom: 2%;
+			width: 0;
+			height: 0;
+			overflow:hidden;
 
-			&-item {
-				img {
-					width: 100%;
-					height: 100%;
-				}
-
-				h2 {
-					position: absolute;
-					top: 140px;
-					z-index: 100;
-					width: 100%;
-					text-align: center;
-					font-size: 50px;
-					letter-spacing: 2px;
-					text-shadow: 2px 2px 10px black;
-					color: white;
-				}
+			>img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}.text {
+				position: absolute;
+				width: 100%;
+				top: -1000px;
+				left: 0;
+				text-align: center;
+				color: #fff;
+				font-size: 50px;
+				line-height: 80px;
+				font-weight: 800;
+				z-index: 10;
 			}
 		}
+
 
 		.content {
 			margin-top: 33px;

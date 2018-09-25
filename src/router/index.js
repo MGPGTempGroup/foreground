@@ -35,6 +35,12 @@ import careers from '@/views/aboutUs/careers'
 import team from '@/views/aboutUs/team'
 import testimonials from '@/views/aboutUs/testimonials'
 
+// 更新/升级
+import industryUpdates from '@/views/industryUpdates'
+
+//用您的语言进行交流
+import weSpeakYourlanguage from '@/views/weSpeakYourlanguage'
+
 Vue.use(Router)
 export default new Router({
 	mode: 'history',
@@ -87,11 +93,11 @@ export default new Router({
 			path: '/buy-residential',
 			name: 'buyResidential',
 			component: buyResidential
-		},{
+		}, {
 			path: '/selling',
 			name: 'selling',
 			component: selling
-		},{
+		}, {
 			path: '/renting',
 			name: 'renting',
 			component: renting
@@ -118,7 +124,15 @@ export default new Router({
 			path: '/about-us-testimonials',
 			name: 'testimonials',
 			component: testimonials
-		} , 
+		}, {
+			path: '/industry-updates',
+			name: 'industryUpdates',
+			component: industryUpdates
+		}, {
+			path: '/we-speak-your-language',
+			name: 'weSpeakYourlanguage',
+			component: weSpeakYourlanguage
+		},
 		{
 			path: '/awagegedemo',
 			name: 'awagegedemo',
