@@ -23,21 +23,11 @@
 						</p>
 					</el-col>
 				</el-row>
-				<!-- 服务地区列表 -->
-				<el-row>
-					<main-box v-for="(item,index) in 9" :key="index"></main-box>
-				</el-row>
-				<!--    <el-row tag="ul" class="areas-list" >
-          <el-col
-            class="areas-list-item"
-            v-for="(item, index) in 6"
-            :key="index"
-            tag="li"
-            :xs="24" :sm="12" :md="8" :lg="8" >
-            <main-box />
-          </el-col>
-        </el-row> -->
 			</el-card>
+			<!-- 服务地区列表 -->
+			<el-row>
+				<main-box v-for="(item,index) in 9" :key="index"></main-box>
+			</el-row>
 		</div>
 	</div>
 </template>
