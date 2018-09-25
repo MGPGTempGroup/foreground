@@ -14,9 +14,15 @@ import areasWeServe from '@/views/property/areasWeServe'
 import marketing from '@/views/projects/marketing'
 import leasing from '@/views/projects/leasing'
 
-// 租房
-import renting from '@/views/renting'
+// 购买
+import newDevelopments from '@/views/buy/newDevelopments'
+import buyResidential from '@/views/buy/buyResidential'
 
+// 租房
+import renting from '@/views/rent'
+
+// 出售
+import selling from '@/views/sell'
 // 商业/广告相关页面
 import commercial from '@/views/commercial'
 
@@ -32,8 +38,7 @@ import testimonials from '@/views/aboutUs/testimonials'
 Vue.use(Router)
 export default new Router({
 	mode: 'history',
-	routes: [
-		{
+	routes: [{
 			path: '/',
 			name: 'home',
 			component: home
@@ -74,6 +79,24 @@ export default new Router({
 			component: commercial
 		},
 		{
+			path: '/new-developments',
+			name: 'newDevelopments',
+			component: newDevelopments
+		},
+		{
+			path: '/buy-residential',
+			name: 'buyResidential',
+			component: buyResidential
+		},{
+			path: '/selling',
+			name: 'selling',
+			component: selling
+		},{
+			path: '/renting',
+			name: 'renting',
+			component: renting
+		},
+		{
 			path: '/contact-us',
 			name: 'contactUs',
 			component: contactUs
@@ -87,20 +110,15 @@ export default new Router({
 			path: '/about-us-careers',
 			name: 'careers',
 			component: careers
-		},{
+		}, {
 			path: '/about-us-team',
 			name: 'team',
 			component: team
-		},{
+		}, {
 			path: '/about-us-testimonials',
 			name: 'testimonials',
 			component: testimonials
-		},
-		,{
-			path: '/renting',
-			name: 'renting',
-			component: renting
-		},
+		} , 
 		{
 			path: '/awagegedemo',
 			name: 'awagegedemo',

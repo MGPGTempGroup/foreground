@@ -110,6 +110,7 @@
 						text-align: center;
 						font-size: 15px;
 						font-weight: 800;
+
 						>.fill {
 							background: #000;
 							padding-bottom: 100%;
@@ -131,7 +132,8 @@
 					line-height: 31px;
 					border-radius: 3px;
 					border: 2px solid #FF6600;
-					&:hover{
+
+					&:hover {
 						color: #fff;
 						background: #FF6600;
 					}

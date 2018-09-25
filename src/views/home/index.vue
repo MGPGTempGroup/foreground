@@ -8,7 +8,7 @@
 				</el-carousel-item>
 			</el-carousel>
 		</div>
-		<el-row :gutter="20">
+		<el-row>
 			<main-box v-for="(item,index) in 9" :key="index"></main-box>
 		</el-row>
 	</main>
