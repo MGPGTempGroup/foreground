@@ -13,6 +13,7 @@ import areasWeServe from '@/views/property/areasWeServe'
 // 方案/项目相关页面
 import marketing from '@/views/projects/marketing'
 import leasing from '@/views/projects/leasing'
+import success from '@/views/projects/success'
 
 // 购买
 import newDevelopments from '@/views/buy/newDevelopments'
@@ -23,6 +24,7 @@ import renting from '@/views/rent'
 
 // 出售
 import selling from '@/views/sell'
+
 // 商业/广告相关页面
 import commercial from '@/views/commercial'
 
@@ -78,6 +80,10 @@ export default new Router({
 			path: '/project-leasing',
 			name: 'projectLeasing',
 			component: leasing
+		},{
+			path: '/past-success',
+			name: 'pastSuccess',
+			component: success
 		},
 		{
 			path: '/commercial',
