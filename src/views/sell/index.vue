@@ -116,8 +116,6 @@
 			}
 
 			&-form {
-				margin-top: 35px;
-
 				@include media-md {
 					margin-top: 30px;
 				}
