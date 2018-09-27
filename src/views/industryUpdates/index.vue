@@ -31,7 +31,6 @@
 
 			@include media-md {
 				margin-top: 30px;
-				padding: 0 30px;
 			}
 
 			@include media-sm {
