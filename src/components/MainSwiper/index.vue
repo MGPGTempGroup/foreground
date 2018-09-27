@@ -53,6 +53,7 @@
 	}
 </script>
 <style lang="scss">
+	@import '@/assets/sass/mixins/responsive.scss';
 	.main-swiper {
 		width: 100%;
 		.swiper-slide {
@@ -69,6 +70,9 @@
 				z-index: 100;
 				margin: 0;
 				font-size: 312.5%;
+				@include media-xs {
+					font-size: 180%;
+				}
 				color: white;
 				text-align: center;
 				line-height: 50px;
@@ -90,6 +94,13 @@
 		}
 
 		.swiper-button {
+			&-prev, &-next {
+				@include media-xs {
+					width: 18px;
+					height: 35px;
+					background-size: 18px 35px;
+				}
+			}
 			&-prev {
 				left: 3%;
 			}
