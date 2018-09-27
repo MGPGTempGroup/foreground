@@ -1,7 +1,7 @@
 <template>
 	<main class="renting">
 		<main-swiper></main-swiper>
-		<el-row>
+		<el-row  class="content">
 			<el-col :sm="12" :md="8" :lg="8" class="search">
 				<div class="main">
 					<div class="title">

@@ -46,7 +46,6 @@
 </script>
 <style scoped lang="scss">
 	.container {
-		padding: 10px;
 		cursor: pointer;
 
 		.main {

@@ -1,13 +1,6 @@
 <template>
   <div class="headoffice">
-    <div class="carousel" >
-      <el-carousel class="carousel" :interval="5000" height="500px">
-        <el-carousel-item class="carousel-item" v-for="item in 4" :key="item">
-          <img src="@/assets/images/banner/Home_Hero_1.1.gif" alt="">
-          <h2>&nbsp;One step ahead.</h2>
-        </el-carousel-item>
-      </el-carousel>
-    </div>
+   <main-swiper></main-swiper>
     <el-row class="content" >
       <el-col class="content-desc">
         <el-card class="content-desc-inner" >
@@ -42,35 +35,18 @@
 </template>
 
 <script>
+	import MainSwiper from '@/components/MainSwiper'
   export default {
-    name: 'headoffice-page'
+    name: 'headoffice-page',
+    components: {
+			MainSwiper
+    }
   }
 </script>
 
 <style scoped lang="scss" >
   @import '@/assets/sass/mixins/responsive.scss';
   .headoffice {
-    padding: 35px 0px 70px 0px;
-    .carousel {
-      margin: 0 auto;
-      &-item {
-        img {
-          width: 100%;
-          height: 100%;
-        }
-        h2 {
-          position: absolute;
-          top: 140px;
-          z-index: 100;
-          width: 100%;
-          text-align: center;
-          font-size: 50px;
-          letter-spacing: 2px;
-          text-shadow: 2px 2px 10px black;
-          color: white;
-        }
-      }
-    }
     .content {
       margin-top: 33px;
       &-desc {

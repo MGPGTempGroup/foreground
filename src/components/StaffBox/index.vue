@@ -32,7 +32,6 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 
 	.container {
-		padding:10px;
 		cursor: pointer;
 
 		.main {
