@@ -19,7 +19,7 @@
 			</el-card>
 			<!-- 服务地区列表 -->
 			<el-row gutter="10">
-				<main-box v-for="(item,index) in 9" :key="index"></main-box>
+				<main-box v-for="(item,index) in 9" to="/areas-we-serve/melbourne" :key="index"></main-box>
 			</el-row>
 		</div>
 	</div>
