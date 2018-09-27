@@ -107,14 +107,19 @@
 			},
 			scroll() {
 				//console.log(this.$refs.toTop.style.bottom)
-				if(this.$refs.toTop.style.bottom!='100px' && this.$refs.toTop.style.bottom!='-100px' && this.$refs.toTop.style.bottom!=''){
+				if (this.$refs.toTop.style.bottom != '100px' && this.$refs.toTop.style.bottom != '-100px' && this.$refs.toTop.style
+					.bottom != '') {
 					return false
 				}
 				Velocity(this.$refs.toTop, "stop")
 				if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-					Velocity(this.$refs.toTop, { bottom: 100 })
+					Velocity(this.$refs.toTop, {
+						bottom: 100
+					})
 				} else {
-					Velocity(this.$refs.toTop, { bottom: -100 })
+					Velocity(this.$refs.toTop, {
+						bottom: -100
+					})
 				}
 			}
 		},
@@ -130,14 +135,23 @@
 
 <style scoped lang="scss">
 	@import '@/assets/sass/mixins/responsive.scss';
+
 	.container {
 		.router-view {
-			margin: 2% auto;
+			margin: 35px auto;
 			max-width: 1263px;
 			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
-			@include media-md-down {
+
+			@include media-md {
+				margin: 30px auto;
+			}
+
+			@include media-sm {
+				margin: 20px auto;
+			}
+
+			@include media-xs {
 				margin: 10px auto;
-				margin-bottom:33px;
 			}
 		}
 
