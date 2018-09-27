@@ -1,7 +1,7 @@
 <template>
   <main class="commercial" >
-   <main-swiper></main-swiper>
-    <el-row class="content">
+    <main-swiper></main-swiper>
+    <el-row>
       <el-col class="commercial-content" :lg="18" >
         <el-card>
           <p><strong>Melbourne Real Estate is leading the way in Commercial Property Management</strong></p>
@@ -33,13 +33,13 @@
 </template>
 
 <script>
-	import MainSwiper from '@/components/MainSwiper'
   import CommonForm from '@/components/CommonForm'
+  import MainSwiper from '@/components/MainSwiper'
   export default {
     name: 'commercial-page',
     components: {
-			MainSwiper,
-      CommonForm
+      CommonForm,
+      MainSwiper
     }
   }
 </script>
@@ -47,7 +47,7 @@
 <style scoped lang="scss" >
   @import '@/assets/sass/mixins/responsive.scss';
   .commercial {
-   
+    padding-bottom: 33px;
     &-content, &-form {
       margin-top: 30px;
       @include media-md-down {
