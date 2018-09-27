@@ -22,22 +22,30 @@
 					<i class="el-icon-more" slot="reference"></i>
 				</el-popover>
 			</div>
-			<div class="main">
-				<div class="img-box">
-					<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537655193446&di=f867d1a471fe4a4642c4f6df98ed32f2&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F908fa0ec08fa513d14e7ade2366d55fbb2fbd9b9.jpg">
+			<router-link :to="to" >
+				<div class="main">
+					<div class="img-box">
+						<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537655193446&di=f867d1a471fe4a4642c4f6df98ed32f2&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F908fa0ec08fa513d14e7ade2366d55fbb2fbd9b9.jpg">
+					</div>
 				</div>
-			</div>
-			<div class="foot">
-				<font>
-					Read More
-				</font>
-			</div>
+				<div class="foot">
+					<font>
+						Read More
+					</font>
+				</div>
+			</router-link>
 		</div>
 	</el-col>
 </template>
 <script>
 	export default {
 		name: 'main-box',
+		props: {
+			to: {
+				type: String,
+				default: '/'	
+			},
+		},
 		data() {
 			return {
 
