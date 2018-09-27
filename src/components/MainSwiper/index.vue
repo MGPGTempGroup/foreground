@@ -55,7 +55,7 @@
 <style lang="scss">
 	.main-swiper {
 		width: 100%;
-		height: 500px;
+		height: calc(50%);
 		.swiper-slide {
 			img {
 				width: 100%;
@@ -87,6 +87,15 @@
 
 		.my-bullet-active {
 			opacity: 1;
+		}
+
+		.swiper-button {
+			&-prev {
+				left: 3%;
+			}
+			&-next {
+				right: 3%;
+			}
 		}
 
 
