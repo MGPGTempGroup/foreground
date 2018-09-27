@@ -1,10 +1,12 @@
 <template>
 	<main class="container">
 		<top-info textHtml="Industry Updates"></top-info>
-		<el-row class="content">
-			<main-box v-for="(item,index) in 9" :key="index"></main-box>
-		</el-row>
-		<div class="load-more">Load More</div>
+		<div class="content">
+			<el-row gutter='20'>
+				<main-box v-for="(item,index) in 9" :key="index"></main-box>
+			</el-row>
+			<div class="load-more">Load More</div>
+		</div>
 	</main>
 </template>
 
@@ -21,7 +23,27 @@
 </script>
 
 <style scoped lang="scss">
+	@import '@/assets/sass/mixins/responsive.scss';
+
 	.container {
+		.content {
+			margin-top: 35px;
+
+			@include media-md {
+				margin-top: 30px;
+				padding: 0 30px;
+			}
+
+			@include media-sm {
+				margin-top: 20px;
+			}
+
+			@include media-xs {
+				margin-top: 10px;
+				padding: 0 10px;
+			}
+		}
+
 		>.load-more {
 			cursor: pointer;
 			display: block;
