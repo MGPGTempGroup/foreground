@@ -9,6 +9,7 @@ import landlords from '@/views/property/landlords'
 import prospectiveTenants from '@/views/property/prospectiveTenants'
 import currentTenants from '@/views/property/currentTenants'
 import areasWeServe from '@/views/property/areasWeServe'
+import areasDetail from '@/views/property/areasDetail'
 
 // 方案/项目相关页面
 import marketing from '@/views/projects/marketing'
@@ -70,6 +71,11 @@ export default new Router({
 			path: '/areas-we-serve',
 			name: 'areasWeServe',
 			component: areasWeServe
+		},
+		{
+			path: '/areas-we-serve/:area',
+			name: 'areaDetail',
+			component: areasDetail
 		},
 		{
 			path: '/project-marketing',
