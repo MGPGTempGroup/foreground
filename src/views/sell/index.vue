@@ -82,18 +82,18 @@
 
 	.selling {
 		.content {
-			margin-top: 33px;
-
-			@include media-xs {
-				padding: 0px 10px !important;
+			margin-top: 35px;
+			@include media-md{
+				margin-top: 30px;
+				padding:0 30px;
 			}
-
-			@include media-sm {
-				padding: 0px 30px !important;
+			@include media-sm{
+				margin-top: 20px;
+				padding:0 20px;
 			}
-
-			@include media-md {
-				padding: 0px 40px !important;
+			@include media-xs{
+				margin-top: 10px;
+				padding:0 10px;
 			}
 
 			&-desc {
