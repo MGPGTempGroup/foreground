@@ -129,10 +129,16 @@
 					padding: 0px 10px;
 				}
 
-				@include media-sm-down {
-					img {
-						width: 100%;
-					}
+				@include media-md {
+					margin-top: 30px;
+				}
+
+				@include media-sm {
+					margin-top: 20px;
+				}
+
+				@include media-xs {
+					margin-top: 10px;
 				}
 			}
 		}

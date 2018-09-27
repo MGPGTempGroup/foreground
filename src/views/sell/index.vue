@@ -83,17 +83,20 @@
 	.selling {
 		.content {
 			margin-top: 35px;
-			@include media-md{
+
+			@include media-md {
 				margin-top: 30px;
-				padding:0 30px;
+				padding: 0 30px;
 			}
-			@include media-sm{
+
+			@include media-sm {
 				margin-top: 20px;
-				padding:0 20px;
+				padding: 0 20px;
 			}
-			@include media-xs{
+
+			@include media-xs {
 				margin-top: 10px;
-				padding:0 10px;
+				padding: 0 10px;
 			}
 
 			&-desc {
@@ -113,8 +116,18 @@
 			}
 
 			&-form {
-				@include media-md-down {
-					margin-top: 40px;
+				margin-top: 35px;
+
+				@include media-md {
+					margin-top: 30px;
+				}
+
+				@include media-sm {
+					margin-top: 20px;
+				}
+
+				@include media-xs {
+					margin-top: 10px;
 				}
 
 				p {
