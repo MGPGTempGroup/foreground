@@ -1,13 +1,6 @@
 <template>
 	<div class="areas-we-serve">
-		<div class="carousel">
-			<el-carousel class="carousel" :interval="5000" height="500px">
-				<el-carousel-item class="carousel-item" v-for="item in 4" :key="item">
-					<img src="@/assets/images/banner/Home_Hero_1.1.gif" alt="">
-					<h2>&nbsp;One step ahead.</h2>
-				</el-carousel-item>
-			</el-carousel>
-		</div>
+		<main-swiper></main-swiper>
 		<div class="content">
 			<el-card class="content-inner">
 				<el-row class="content-desc">
@@ -25,7 +18,7 @@
 				</el-row>
 			</el-card>
 			<!-- 服务地区列表 -->
-			<el-row>
+			<el-row gutter="10">
 				<main-box v-for="(item,index) in 9" :key="index"></main-box>
 			</el-row>
 		</div>
@@ -33,10 +26,12 @@
 </template>
 
 <script>
+	import MainSwiper from '@/components/MainSwiper'
 	import MainBox from '@/components/MainBox'
 	export default {
 		name: 'areas-we-serve-page',
 		components: {
+			MainSwiper,
 			MainBox
 		}
 	}
@@ -46,38 +41,18 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 
 	.areas-we-serve {
-		padding-bottom: 70px;
-
-		.carousel {
-			margin: 0 auto;
-
-			&-item {
-				img {
-					width: 100%;
-					height: 100%;
-				}
-
-				h2 {
-					position: absolute;
-					top: 140px;
-					z-index: 100;
-					width: 100%;
-					text-align: center;
-					font-size: 50px;
-					letter-spacing: 2px;
-					text-shadow: 2px 2px 10px black;
-					color: white;
-				}
-			}
-		}
-
 		.content {
+			margin-top: 33px;
 			@include media-md-down {
+				margin-top: 10px;
 				padding: 0px 10px;
 			}
 
 			&-inner {
-				margin-top: 20px;
+				margin: 33px 0;
+				@include media-md-down {
+					margin: 10px 0;
+				}
 
 				&-desc {
 					>p {

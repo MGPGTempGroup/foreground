@@ -47,8 +47,7 @@
 </script>
 <style scoped lang="scss">
 	.container {
-		padding: 10px;
-
+		padding-bottom: 10px;
 		.main {
 			display: block;
 			position: relative;

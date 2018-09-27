@@ -129,12 +129,16 @@
 </script>
 
 <style scoped lang="scss">
+	@import '@/assets/sass/mixins/responsive.scss';
 	.container {
 		.router-view {
-			padding: 2% 0;
-			margin: 0 auto;
+			margin: 2% auto;
 			max-width: 1263px;
 			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
+			@include media-md-down {
+				margin: 10px auto;
+				margin-bottom:33px;
+			}
 		}
 
 		.to-top {
