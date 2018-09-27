@@ -131,10 +131,15 @@
 <style scoped lang="scss">
 	@import '@/assets/sass/mixins/responsive.scss';
 	.container {
+		background-image: url('/images/background/城市,天空,天际线,建筑物cc0可商用高清图片_千叶网.jpeg');
+		background-size: 100%;
+		background-position: 0px -200px;
+		background-attachment: fixed;
 		.router-view {
 			margin: 2% auto;
-			max-width: 1263px;
+			max-width: 1200px;
 			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
+			opacity: .97;
 			@include media-md-down {
 				margin: 10px auto;
 				margin-bottom:33px;
