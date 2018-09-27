@@ -42,16 +42,32 @@
 
 	.areas-we-serve {
 		.content {
-			margin-top: 33px;
-			@include media-md-down {
-				margin-top: 10px;
-				padding: 0px 10px;
+			margin-top: 35px;
+			@include media-md{
+				margin-top: 30px;
+				padding:0 30px;
 			}
-
+			@include media-sm{
+				margin-top: 20px;
+				padding:0 20px;
+			}
+			@include media-xs{
+				margin-top: 10px;
+				padding:0 10px;
+			}
 			&-inner {
-				margin: 33px 0;
-				@include media-md-down {
+				margin: 35px 0;
+				@include media-md{
+					margin: 30px 0;
+					padding:0 30px;
+				}
+				@include media-sm{
+					margin: 20px 0;
+					padding:0 20px;
+				}
+				@include media-xs{
 					margin: 10px 0;
+					padding:0 10px;
 				}
 
 				&-desc {

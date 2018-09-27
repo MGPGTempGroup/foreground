@@ -2,7 +2,7 @@
 	<div class="success">
 		<top-info textHtml="Past Success" img="https://www.melbournerealestate.com.au/wp-content/uploads/2014/07/Past_Success_Hero.jpg"></top-info>
 		<div class="content">
-			<el-row gutter='10'>
+			<el-row gutter='20'>
 				<main-box v-for="item in 9"></main-box>
 			</el-row>
 		</div>
@@ -42,12 +42,22 @@
 
 	.success {
 		.content {
-			margin-top: 33px;
+			margin-top: 35px;
 
-			@include media-sm-down {
+			@include media-md {
+				margin-top: 30px;
+				padding: 0 30px;
+			}
+
+			@include media-sm {
+				margin-top: 20px;
+			}
+
+			@include media-xs {
 				margin-top: 10px;
-				padding: 0px 10px;
+				padding: 0 10px;
 			}
 		}
+
 	}
 </style>
