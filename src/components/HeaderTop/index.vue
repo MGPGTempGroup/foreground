@@ -24,14 +24,7 @@
       <div class="inner-mobile-top" >
         <div class="inner-mobile-top-left" >
           <router-link class="inner-mobile-top-left-logo" to="/" >
-            <img src="@/assets/images/logo/logo_single_transparent.png" alt="">
-            <div>
-              <span>MGPG</span>
-              <br>
-              <span>
-                Melbourne Grand Property Group
-              </span>
-            </div>
+            <img src="@/assets/images/logo/logo_widthplus_transparent.png" alt="">
           </router-link>
         </div>
         <div :span="2" class="inner-mobile-top-right" >
@@ -40,9 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="inner-mobile-nav" :span="24" >
-        <navigation :show="displayMobileNav" mode="vertical" />
-      </div>
+      <navigation class="inner-mobile-nav" :show="displayMobileNav" mode="vertical" />
     </div>
   </el-header>
 </template>
@@ -63,6 +54,7 @@
 </script>
 
 <style scoped lang="scss" >
+  @import '@/assets/sass/mixins/transition.scss';
   .container {
     padding: 0px 0px;
     height: auto !important;
@@ -134,6 +126,7 @@
             }
             > img {
               height: 45px;
+              font-size: 0px;
             }
           }
         }
@@ -144,6 +137,11 @@
             display: flex;
             display: -webkit-flex;
             align-items: center;
+            transform: scale(1,1);
+            @include transitionAll;
+            &:active {
+              transform: scale(0.8, 0.8);
+            }
             img {
               height: 35px;
             }
@@ -151,6 +149,7 @@
         }
       }
       &-nav {
+        margin-top: 8px;
         height: auto;
       }
     }
