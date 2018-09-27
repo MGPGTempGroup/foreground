@@ -1,7 +1,7 @@
 <template>
 	<main class="marketing">
 		<main-swiper></main-swiper>
-		<el-row>
+		<el-row class="content">
 			<el-col class="marketing-content" :lg="18">
 				<el-card>
 					<h1 style="margin-top: 0px;">Project Marketing</h1>

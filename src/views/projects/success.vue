@@ -1,12 +1,7 @@
 <template>
 	<div class="success">
-		<div class="img-box">
-			<img src="https://www.melbournerealestate.com.au/wp-content/uploads/2014/07/Past_Success_Hero.jpg">
-			<div class="text" ref="text">
-				Past Success
-			</div>
-		</div>
-		<div class="success-content">
+		<top-info textHtml="Past Success" img="https://www.melbournerealestate.com.au/wp-content/uploads/2014/07/Past_Success_Hero.jpg"></top-info>
+		<div class="content">
 			<el-row gutter='10'>
 				<main-box v-for="item in 9"></main-box>
 			</el-row>
@@ -15,10 +10,12 @@
 </template>
 
 <script>
+	import TopInfo from '@/components/TopInfo'
 	import MainBox from '@/components/MainBox'
 	export default {
 		name: 'past-success-page',
 		components: {
+			TopInfo,
 			MainBox
 		},
 		data() {
@@ -36,18 +33,6 @@
 					}
 				}
 			}
-		},
-		created() {
-			this.$nextTick(() => {
-				let textHeight = this.$refs.text.offsetHeight
-				let marginTop = -textHeight / 2
-				Velocity(this.$refs.text, {
-					marginTop: marginTop,
-					top: '50%'
-				}, {
-					duration: 1000
-				})
-			})
 		}
 	}
 </script>
@@ -56,44 +41,13 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 
 	.success {
-		&-content {
+		.content {
 			margin-top: 33px;
+
 			@include media-sm-down {
 				margin-top: 10px;
 				padding: 0px 10px;
 			}
 		}
-
-		>.img-box {
-			position: relative;
-			padding-bottom: 40%;
-			padding-left: 100%;
-			margin-bottom: 2%;
-			width: 0;
-			height: 0;
-			overflow: hidden;
-
-			>img {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-			}
-
-			.text {
-				position: absolute;
-				width: 100%;
-				top: -1000px;
-				left: 0;
-				text-align: center;
-				color: #fff;
-				font-size: 50px;
-				line-height: 80px;
-				font-weight: 800;
-				z-index: 10;
-			}
-		}
-
 	}
 </style>

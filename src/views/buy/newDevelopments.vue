@@ -1,9 +1,7 @@
 <template>
 	<main class="container">
-		<div class="img-box">
-			<img src="https://www.melbournerealestate.com.au/wp-content/uploads/2015/09/External-V1_View-from-Dyer-Lane-Copy.jpg">
-		</div>
-		<el-row>
+		<top-info img="https://www.melbournerealestate.com.au/wp-content/uploads/2015/09/External-V1_View-from-Dyer-Lane-Copy.jpg"></top-info>
+		<el-row class="content">
 			<main-box v-for="(item,index) in 9" :key="index"></main-box>
 		</el-row>
 		<div class="load-more">Load More</div>
@@ -11,9 +9,11 @@
 </template>
 
 <script>
+	import TopInfo from '@/components/TopInfo'
 	import MainBox from '@/components/MainBox'
 	export default {
 		components: {
+			TopInfo,
 			MainBox
 		},
 		name: 'new-developments-page'
@@ -22,24 +22,6 @@
 
 <style scoped lang="scss">
 	.container {
-		>.img-box {
-			position: relative;
-			padding-bottom: 40%;
-			padding-left: 100%;
-			margin-bottom: 2%;
-			width: 0;
-			height: 0;
-
-			>img {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-
-			}
-		}
-
 		>.load-more {
 			cursor: pointer;
 			display: block;

@@ -1,12 +1,7 @@
 <template>
   <main class="commercial" >
-    <el-carousel class="carousel" :interval="5000" height="500px">
-      <el-carousel-item class="carousel-item" v-for="item in 4" :key="item">
-        <img src="@/assets/images/banner/Home_Hero_1.1.gif" alt="">
-        <h2>&nbsp;One step ahead.</h2>
-      </el-carousel-item>
-    </el-carousel>
-    <el-row>
+   <main-swiper></main-swiper>
+    <el-row class="content">
       <el-col class="commercial-content" :lg="18" >
         <el-card>
           <p><strong>Melbourne Real Estate is leading the way in Commercial Property Management</strong></p>
@@ -38,10 +33,12 @@
 </template>
 
 <script>
+	import MainSwiper from '@/components/MainSwiper'
   import CommonForm from '@/components/CommonForm'
   export default {
     name: 'commercial-page',
     components: {
+			MainSwiper,
       CommonForm
     }
   }
@@ -50,27 +47,7 @@
 <style scoped lang="scss" >
   @import '@/assets/sass/mixins/responsive.scss';
   .commercial {
-    padding-bottom: 33px;
-    .carousel {
-      margin: 0 auto;
-      &-item {
-        img {
-          width: 100%;
-          height: 100%;
-        }
-        h2 {
-          position: absolute;
-          top: 140px;
-          z-index: 100;
-          width: 100%;
-          text-align: center;
-          font-size: 50px;
-          letter-spacing: 2px;
-          text-shadow: 2px 2px 10px black;
-          color: white;
-        }
-      }
-    }
+   
     &-content, &-form {
       margin-top: 30px;
       @include media-md-down {

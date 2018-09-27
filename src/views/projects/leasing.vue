@@ -1,7 +1,7 @@
 <template>
 	<main class="leasing">
 		<main-swiper></main-swiper>
-		<el-row>
+		<el-row class="content">
 			<el-col class="leasing-content" :lg="18">
 				<el-card>
 					<h1>Project Leasing</h1>

@@ -1,32 +1,23 @@
 <template>
 	<main class="testimonials">
-		<div class="top-info">
-			<div class="text" ref="text">
-				“To avoid criticism say nothing,<br>
+		<top-info textHtml="“To avoid criticism say nothing,<br>
 				do nothing, be nothing.”<br>
-				<small>Aristotle</small>
-			</div>
-		</div>
-		<el-row class="content" >
-			<el-col :lg="17" class="comments" >
+				<small>Aristotle</small>"></top-info>
+
+		<el-row class="content">
+			<el-col :lg="17" class="comments">
 				<el-card>
 					<ul>
-						<service-comment
-							tag="li"
-							v-for="(item, index) in 20"
-							:key="index"
-							class="comments-item"
-							name="Jane Perry"
-							date="21, September, 2015">
+						<service-comment tag="li" v-for="(item, index) in 20" :key="index" class="comments-item" name="Jane Perry" date="21, September, 2015">
 							呵呵呵呵哈哈哈哈嘻嘻嘻
 						</service-comment>
 					</ul>
 				</el-card>
 			</el-col>
-			<el-col :lg="7" class="form" >
+			<el-col :lg="7" class="form">
 				<el-card>
-					<div slot="header" >
-						<h3 style="margin: 0px;" >Tell us what you think:</h3>
+					<div slot="header">
+						<h3 style="margin: 0px;">Tell us what you think:</h3>
 					</div>
 					<common-form />
 				</el-card>
@@ -35,62 +26,25 @@
 	</main>
 </template>
 <script>
+	import TopInfo from '@/components/TopInfo'
 	import ServiceComment from '@/components/ServiceComment'
 	import CommonForm from '@/components/CommonForm'
 	export default {
 		name: 'testimonials-page',
 		components: {
+			TopInfo,
 			ServiceComment,
 			CommonForm
 		},
 		data() {
 			return {}
-		},
-		methods: {
-
-		},
-		created() {
-			this.$nextTick(() => {
-				let textHeight = this.$refs.text.offsetHeight
-				let marginTop = -textHeight / 2
-				Velocity(this.$refs.text, {
-					marginTop: marginTop,
-					top: '50%'
-				}, {
-					duration: 1000
-				})
-			})
 		}
 	}
 </script>
 <style scoped lang="scss">
 	@import '@/assets/sass/mixins/responsive.scss';
+
 	.testimonials {
-		.top-info {
-			position: relative;
-			width: 100%;
-			height: 500px;
-			text-align: center;
-			background: #000;
-			color: #fff;
-			overflow: hidden;
-
-			.text {
-				position: absolute;
-				width: 100%;
-				top: -1000px;
-				font-size: 30px;
-				line-height: 40px;
-				font-weight: 800;
-
-				small {
-					font-size: 14px;
-					font-weight: 400;
-				}
-			}
-
-		}
-
 		.content {
 			margin: 20px 0;
 			padding-bottom: 30px;
@@ -106,35 +60,48 @@
 				@include media-xs {
 					padding: 0px 10px !important;
 				}
+
 				@include media-sm {
 					padding: 0px 30px !important;
 				}
+
 				@include media-md {
 					padding: 0px 40px !important;
 				}
 			}
+
 			.comments {
 				@include responsivePadding;
+
 				@include media-lg-up {
 					padding-right: 20px;
-				};
+				}
+
+				;
+
 				&-item {
 					margin-top: 1.2%;
 					padding: .75% 0px 1% 0px;
 					border-bottom: 1px solid #ccc;
+
 					&:first-of-type {
 						margin-top: 0px;
 					}
+
 					&:last-of-type {
 						border-bottom-width: 0px;
 					}
 				}
 			}
+
 			.form {
 				@include responsivePadding;
+
 				@include media-md-down {
 					margin-top: 40px;
-				};
+				}
+
+				;
 			}
 		}
 	}

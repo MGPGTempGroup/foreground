@@ -1,11 +1,6 @@
 <template>
 	<div class="selling">
-		<div class="img-box">
-			<img src="https://www.melbournerealestate.com.au/wp-content/uploads/2014/05/Sell_Hero.jpg">
-			<div class="text" ref="text">
-				Selling is our specialty.
-			</div>
-		</div>
+		<top-info textHtml="Selling is our specialty." img="https://www.melbournerealestate.com.au/wp-content/uploads/2014/05/Sell_Hero.jpg"></top-info>
 		<el-row class="content">
 			<el-col class="content-desc" :md="24" :lg="17">
 				<el-card class="content-desc-inner">
@@ -33,7 +28,7 @@
 				</el-card>
 			</el-col>
 			<el-col class="content-form" :md="24" :lg="7" style="float: right;margin-top: 30px;">
-					<contacts-card :contactList="contactList" style="width: 100%;" />
+				<contacts-card :contactList="contactList" style="width: 100%;" />
 			</el-col>
 
 		</el-row>
@@ -41,11 +36,13 @@
 </template>
 
 <script>
+	import TopInfo from '@/components/TopInfo'
 	import CommonForm from '@/components/CommonForm'
 	import ContactsCard from '@/components/Contacts'
 	export default {
 		name: 'selling-page',
 		components: {
+			TopInfo,
 			CommonForm,
 			ContactsCard
 		},
@@ -84,38 +81,6 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 
 	.selling {
-		padding-bottom: 70px;
-
-		>.img-box {
-			position: relative;
-			padding-bottom: 40%;
-			padding-left: 100%;
-			margin-bottom: 2%;
-			width: 0;
-			height: 0;
-			overflow:hidden;
-
-			>img {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-			}.text {
-				position: absolute;
-				width: 100%;
-				top: -1000px;
-				left: 0;
-				text-align: center;
-				color: #fff;
-				font-size: 50px;
-				line-height: 80px;
-				font-weight: 800;
-				z-index: 10;
-			}
-		}
-
-
 		.content {
 			margin-top: 33px;
 
