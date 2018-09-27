@@ -46,8 +46,13 @@
 	}
 </script>
 <style scoped lang="scss">
+	@import '@/assets/sass/mixins/responsive.scss';
 	.container {
-		padding-bottom: 10px;
+		padding-bottom: 20px;
+		@include media-xs{
+			padding-bottom: 10px;
+		}
+		
 		.main {
 			display: block;
 			position: relative;
