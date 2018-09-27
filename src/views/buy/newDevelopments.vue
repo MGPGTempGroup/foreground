@@ -1,10 +1,13 @@
 <template>
 	<main class="container">
 		<top-info img="https://www.melbournerealestate.com.au/wp-content/uploads/2015/09/External-V1_View-from-Dyer-Lane-Copy.jpg"></top-info>
-		<el-row class="content" gutter='20'>
-			<main-box v-for="(item,index) in 9" :key="index"></main-box>
-		</el-row>
-		<div class="load-more">Load More</div>
+		<div class="content">
+			<el-row gutter='20'>
+				<main-box v-for="(item,index) in 9" :key="index"></main-box>
+			</el-row>
+			<div class="load-more">Load More</div>
+		</div>
+
 	</main>
 </template>
 
@@ -22,24 +25,26 @@
 
 <style scoped lang="scss">
 	@import '@/assets/sass/mixins/responsive.scss';
+
 	.container {
 		.content {
-		margin-top: 35px;
-			@include media-md{
+			margin-top: 35px;
+
+			@include media-md {
 				margin-top: 30px;
-				padding:0 30px;
 			}
-			@include media-sm{
+
+			@include media-sm {
 				margin-top: 20px;
-				padding:0 20px;
 			}
-			@include media-xs{
+
+			@include media-xs {
 				margin-top: 10px;
-				padding:0 10px;
+				padding: 0 10px;
 			}
 		}
 
-		>.load-more {
+		.load-more {
 			cursor: pointer;
 			display: block;
 			width: 110px;
