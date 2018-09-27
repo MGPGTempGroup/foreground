@@ -6,15 +6,16 @@
 				Past Success
 			</div>
 		</div>
-		<el-row>
-			<main-box v-for="item in 9"></main-box>
-		</el-row>
+		<div class="success-content">
+			<el-row gutter='10'>
+				<main-box v-for="item in 9"></main-box>
+			</el-row>
+		</div>
 	</div>
 </template>
 
 <script>
-	
-	 import MainBox from '@/components/MainBox'
+	import MainBox from '@/components/MainBox'
 	export default {
 		name: 'past-success-page',
 		components: {
@@ -55,7 +56,13 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 
 	.success {
-		padding-bottom: 70px;
+		&-content {
+			margin-top: 33px;
+			@include media-sm-down {
+				margin-top: 10px;
+				padding: 0px 10px;
+			}
+		}
 
 		>.img-box {
 			position: relative;
@@ -64,7 +71,7 @@
 			margin-bottom: 2%;
 			width: 0;
 			height: 0;
-			overflow:hidden;
+			overflow: hidden;
 
 			>img {
 				position: absolute;
@@ -72,7 +79,9 @@
 				height: 100%;
 				top: 0;
 				left: 0;
-			}.text {
+			}
+
+			.text {
 				position: absolute;
 				width: 100%;
 				top: -1000px;

@@ -55,8 +55,8 @@
 <style lang="scss">
 	.main-swiper {
 		width: 100%;
-		height: calc(50%);
 		.swiper-slide {
+			height:auto;
 			img {
 				width: 100%;
 				height: 100%;
