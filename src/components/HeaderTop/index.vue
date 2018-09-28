@@ -58,8 +58,8 @@
   .container {
     padding: 0px 0px;
     height: auto !important;
-    background-color: #272727;
     .inner-pc {
+      background-color: #2C2C2C;
       &-top {
         display: flex;
         display: -webkit-flex;
@@ -98,6 +98,7 @@
     }
     .inner-mobile {
       padding: 10px 0px;
+      background-color: #2C2C2C;
       &-top {
         position: relative;
         padding: 0px 0px;
