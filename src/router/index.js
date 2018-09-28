@@ -36,6 +36,7 @@ import contactUs from '@/views/contactUs'
 import headoffice from '@/views/aboutUs/headoffice'
 import careers from '@/views/aboutUs/careers'
 import team from '@/views/aboutUs/team'
+import staffDetail from '@/views/aboutUs/staffDetail'
 import testimonials from '@/views/aboutUs/testimonials'
 
 // 更新/升级
@@ -105,7 +106,8 @@ export default new Router({
 			path: '/buy-residential',
 			name: 'buyResidential',
 			component: buyResidential
-		}, {
+		},
+		{
 			path: '/selling',
 			name: 'selling',
 			component: selling
@@ -128,19 +130,28 @@ export default new Router({
 			path: '/about-us-careers',
 			name: 'careers',
 			component: careers
-		}, {
+		},
+		{
 			path: '/about-us-team',
 			name: 'team',
 			component: team
-		}, {
+		},
+		{
+			path: '/about-us-team/:staffName',
+			name: 'staffDetail',
+			component: staffDetail
+		},
+		{
 			path: '/about-us-testimonials',
 			name: 'testimonials',
 			component: testimonials
-		}, {
+		},
+		{
 			path: '/industry-updates',
 			name: 'industryUpdates',
 			component: industryUpdates
-		}, {
+		},
+		{
 			path: '/we-speak-your-language',
 			name: 'weSpeakYourlanguage',
 			component: weSpeakYourlanguage

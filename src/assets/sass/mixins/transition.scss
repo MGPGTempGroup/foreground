@@ -4,3 +4,16 @@
   -moz-transition: all $time;
   -o-transition: all $time;
 }
+
+
+@keyframes shake {
+  0% {
+    transform: translateX(-1.5px) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(1.5px) rotate(1.5deg);
+  }
+}

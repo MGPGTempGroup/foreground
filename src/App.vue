@@ -136,7 +136,7 @@
 		background-position: 0px -200px;
 		background-attachment: fixed;
 		.router-view {
-			margin: 2% auto;
+			margin: 3% auto;
 			max-width: 1200px;
 			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
 			opacity: .97;

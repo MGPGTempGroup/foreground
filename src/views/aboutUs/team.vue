@@ -8,7 +8,7 @@
 				Corporate
 			</div>
 			<el-row>
-				<staff-box v-for="(item,index) in 5" :key="index"></staff-box>
+				<staff-box to="/about-us-team/Ann Rogers" v-for="(item,index) in 5" :key="index"></staff-box>
 			</el-row>
 		</div>
 	</main>

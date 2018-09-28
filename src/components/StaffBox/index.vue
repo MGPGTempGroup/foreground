@@ -1,26 +1,34 @@
 <template>
 	<el-col :sm="8" :md="6" :lg="6" class="container">
-		<div class="main">
-			<div class="img-box">
-				<img src="http://img2.ctoutiao.com/uploads/2017/07/11/0e209371e2c664ecbbd73180b6ddd78f.jpg">
+		<router-link :to="to" >
+			<div class="main">
+				<div class="img-box">
+					<img src="http://img2.ctoutiao.com/uploads/2017/07/11/0e209371e2c664ecbbd73180b6ddd78f.jpg">
+				</div>
 			</div>
-		</div>
-		<div class="foot">
-			<font class="name">
-				Lei Jun
-			</font>
-			<font class="read-more">
-				Read More
-			</font>
-			<div class="presentation">
-				Founder and chairman of xiaomi technology Founder and chairman of xiaomi technology
+			<div class="foot">
+				<font class="name">
+					Lei Jun
+				</font>
+				<font class="read-more">
+					Read More
+				</font>
+				<div class="presentation">
+					Founder and chairman of xiaomi technology Founder and chairman of xiaomi technology
+				</div>
 			</div>
-		</div>
+		</router-link>
 	</el-col>
 </template>
 <script>
 	export default {
 		name: 'staff-box',
+		props: {
+			to: {
+				type: String,
+				default: '/'
+			}
+		},
 		data() {
 			return {
 
