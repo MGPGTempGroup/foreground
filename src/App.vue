@@ -1,6 +1,5 @@
 <template>
 	<div class="container" @touchmove="scroll">
-
 		<!-- 头部 -->
 		<header-top />
 
@@ -14,9 +13,14 @@
 
 		<!-- 底部介绍与版权相关信息 -->
 		<bottom-footer />
-		<!-- 返回顶部 -->
-		<div class="to-top" ref="toTop" @click="toTop">
-			<i class="el-icon-arrow-up"></i>
+
+		<div class="absolute-container" >
+			<!-- 返回顶部 -->
+			<div class="to-top" ref="toTop" @click="toTop">
+				<i class="el-icon-arrow-up"></i>
+			</div>
+			<!-- 背景（filter） -->
+			<img class="bg recovery" src="/images/background/城市,天空,天际线,建筑物cc0可商用高清图片_千叶网.jpeg" alt="">
 		</div>
 	</div>
 </template>
@@ -129,18 +133,41 @@
 					this.scroll()
 				}
 			})
+		},
+		updated() {
 		}
 	};
 </script>
 
 <style scoped lang="scss">
 	@import '@/assets/sass/mixins/responsive.scss';
+	@import '@/assets/sass/mixins/transition.scss';
+
+	@keyframes recovery {
+		from {
+			transform: scale(1.1, 1.1);
+			filter: blur(5px);
+		}
+		to {
+			transform: scale(1, 1);
+			filter: blur(0px);
+		}
+	}
 
 	.container {
-		background-image: url('/images/background/城市,天空,天际线,建筑物cc0可商用高清图片_千叶网.jpeg');
-		background-size: 100%;
-		background-position: 0px -200px;
-		background-attachment: fixed;
+		.bg {
+			position: fixed;
+			left: -1%;
+			top: -14%;
+			width: 102%;
+			z-index: -1;
+			filter: blur(5px);
+			transform: scale(1.1, 1.1);
+			@include transitionAll;
+		}
+		.recovery {
+			animation: recovery 1.5s forwards;
+		}
 		.router-view {
 			margin: 35px auto;
 			max-width: 1200px;

@@ -114,7 +114,7 @@
 				background: #fff;
 
 				.title {
-					font-size: 14px;
+					font-size: 20px;
 					padding: 10px 20px;
 					font-weight: 800;
 				}
