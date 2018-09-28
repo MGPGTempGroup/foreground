@@ -55,13 +55,18 @@
 </script>
 <style scoped lang="scss">
 	@import '@/assets/sass/mixins/responsive.scss';
+	@import '@/assets/sass/mixins/transition.scss';
 	.container {
 		padding-bottom: 20px;
-
+		transform: translateY(0px);
+		&:hover {
+			transform: translateY(-5px);
+		}
+		@include transitionAll;
 		@include media-xs{
 			padding-bottom: 10px;
+			box-shadow: 0px 20px 10px black;
 		}
-		
 		.main {
 			display: block;
 			position: relative;
@@ -101,13 +106,18 @@
 				height: 0;
 				padding-left: 100%;
 				padding-bottom: 70%;
-
+				overflow: hidden;
 				>img {
 					position: absolute;
 					width: 100%;
 					height: 100%;
 					top: 0;
 					left: 0;
+					transform: scale(1.3, 1.3);
+					@include transitionAll;
+					&:hover {
+						transform: scale(1,1);
+					}
 				}
 			}
 

@@ -1,6 +1,6 @@
 <template>
 	<el-col :sm="12" :md="8" :lg="8" class="hbox-container">
-		<el-card shadow="hover" body-style="padding: 0px;" >
+		<el-card style="border: 0px;" shadow="hover" body-style="padding: 0px;" >
 			<div class="main">
 				<div class="img-box">
 					<img src="https://www.melbournerealestate.com.au/wp-content/uploads/2018/05/White-St-Thumbnail-640x462.jpg">
@@ -153,6 +153,7 @@
 					&:hover {
 						color: #fff;
 						background: #FF6600;
+						animation: shake infinite .1s;
 					}
 				}
 			}

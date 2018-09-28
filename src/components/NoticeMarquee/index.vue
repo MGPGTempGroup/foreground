@@ -1,5 +1,5 @@
 <template>
-	<div class="container hidden-md-and-down">
+	<div class="nm-container hidden-md-and-down">
 		<div ref="inner" class="inner">
 			<ul :style="{ left: listLeft + 'px' }" ref="noticeList" class="notice-list">
 				<li ref="noticeItem" class="notice-item" v-for="(notice, index) in list" :key="index">
@@ -49,7 +49,7 @@
 
 
 <style scoped lang="scss">
-	.container {
+	.nm-container {
 		height: 35px;
 		background-color: #31363B;
 
