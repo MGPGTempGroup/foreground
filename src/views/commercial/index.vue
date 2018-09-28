@@ -92,7 +92,7 @@
 
 
 			&-content {
-				padding-right: 32px;
+				padding-right: 20px;
 
 				>* {
 					padding: 10px 10px;

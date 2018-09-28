@@ -45,9 +45,24 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 
 	.testimonials {
+
 		.content {
-			margin: 20px 0;
-			padding-bottom: 30px;
+			margin-top: 35px;
+
+			@include media-md {
+				margin-top: 30px;
+				padding: 0 30px;
+			}
+
+			@include media-sm {
+				margin-top: 20px;
+				padding: 0 20px;
+			}
+
+			@include media-xs {
+				margin-top: 10px;
+				padding: 0 10px;
+			}
 
 			.title {
 				font-size: 20px;
@@ -71,7 +86,6 @@
 			}
 
 			.comments {
-				@include responsivePadding;
 
 				@include media-lg-up {
 					padding-right: 20px;
@@ -95,7 +109,6 @@
 			}
 
 			.form {
-				@include responsivePadding;
 
 				@include media-md-down {
 					margin-top: 40px;

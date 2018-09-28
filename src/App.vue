@@ -107,14 +107,19 @@
 			},
 			scroll() {
 				//console.log(this.$refs.toTop.style.bottom)
-				if(this.$refs.toTop.style.bottom!='100px' && this.$refs.toTop.style.bottom!='-100px' && this.$refs.toTop.style.bottom!=''){
+				if (this.$refs.toTop.style.bottom != '100px' && this.$refs.toTop.style.bottom != '-100px' && this.$refs.toTop.style
+					.bottom != '') {
 					return false
 				}
 				Velocity(this.$refs.toTop, "stop")
 				if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-					Velocity(this.$refs.toTop, { bottom: 100 })
+					Velocity(this.$refs.toTop, {
+						bottom: 100
+					})
 				} else {
-					Velocity(this.$refs.toTop, { bottom: -100 })
+					Velocity(this.$refs.toTop, {
+						bottom: -100
+					})
 				}
 			}
 		},
@@ -130,22 +135,27 @@
 
 <style scoped lang="scss">
 	@import '@/assets/sass/mixins/responsive.scss';
+
 	.container {
 		background-image: url('/images/background/城市,天空,天际线,建筑物cc0可商用高清图片_千叶网.jpeg');
 		background-size: 100%;
 		background-position: 0px -200px;
 		background-attachment: fixed;
 		.router-view {
-			margin: 3% auto;
+			margin: 35px auto;
 			max-width: 1200px;
 			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
 			opacity: .97;
-			@include media-md-down {
+			@include media-md {
+				margin: 30px auto;
+			}
+			@include media-sm {
+				margin: 20px auto;
+			}
+			@include media-xs {
 				margin: 10px auto;
-				margin-bottom:33px;
 			}
 		}
-
 		.to-top {
 			position: fixed;
 			bottom: -100px;
