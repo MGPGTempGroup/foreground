@@ -42,12 +42,10 @@
 				padding:0 30px;
 			}
 			@include media-sm{
-				margin-top: 20px;
-				padding:0 20px;
+				margin-top: 15px;
 			}
 			@include media-xs{
 				margin-top: 10px;
-				padding:0 10px;
 			}
 
 			&-desc {

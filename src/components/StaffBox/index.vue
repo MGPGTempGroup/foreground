@@ -1,6 +1,6 @@
 <template>
 	<el-col :sm="8" :md="6" :lg="6" class="container">
-		<router-link :to="to" >
+		<router-link class="sb-link" :to="to" >
 			<div class="main">
 				<div class="img-box">
 					<img src="http://img2.ctoutiao.com/uploads/2017/07/11/0e209371e2c664ecbbd73180b6ddd78f.jpg">
@@ -41,12 +41,13 @@
 
 	.container {
 		padding-bottom: 20px;
+		cursor: pointer;
 		@include media-xs{
 			padding-bottom: 10px;
 		}
-		
-		cursor: pointer;
-
+		.sb-link {
+			text-decoration: none;
+		}
 		.main {
 			display: block;
 			position: relative;
@@ -69,13 +70,17 @@
 		}
 
 		.foot {
+			padding: 10px 10px;
 			line-height: 35px;
-			padding: 0 10px;
-			border-left: 1px solid #000;
-			border-bottom: 1px solid #000;
+			border-left: 1px solid white;
+			border-bottom: 1px solid white;
 
+			> * {
+				color: white;
+			}
+			
 			>.name {
-				font-size: 14px;
+				font-size: 20px;
 				display: inline-block;
 				font-weight: 800;
 			}
@@ -85,14 +90,16 @@
 				float: right;
 				font-size: 13px;
 				font-weight: 800;
-				color: #666;
+				color: white;
 			}
 			>.presentation{
-				height: 60px;
+				height: 80px;
 				padding-bottom: 10px;
 				line-height: 30px;
-				font-size: 12px;
+				font-size: 14px;
+				letter-spacing: 1px;
 				overflow: hidden;
+				border: none;
 			}
 		}
 

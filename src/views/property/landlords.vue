@@ -4,7 +4,7 @@
 		<el-row class="content">
 			<el-col class="content-desc" :md="24" :lg="17">
 				<el-card class="content-desc-inner">
-					<p><strong>Property Management Landlord Services</strong></p>
+					<h1><strong>Property Management Landlord Services</strong></h1>
 					<p>Melbourne Real Estate has turned the industry standard of property management on its head.</p>
 					<p>Since 2006, we’ve won six state-wide awards from the Real Estate Institute of Victoria recognising outstanding
 						achievement in all areas of real estate practice, including consecutive titles for &nbsp;Property Management
@@ -96,7 +96,7 @@
 
 			&-form {
 				@include media-md-down {
-					margin-top: 40px;
+					margin-top: 25px;
 				}
 
 				p {

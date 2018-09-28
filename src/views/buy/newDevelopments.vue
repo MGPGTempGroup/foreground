@@ -27,6 +27,7 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 
 	.container {
+		padding-bottom: 20px;
 		.content {
 			margin-top: 35px;
 
@@ -48,7 +49,7 @@
 			cursor: pointer;
 			display: block;
 			width: 110px;
-			margin: 10px auto;
+			margin: 15px auto;
 			text-align: center;
 			line-height: 40px;
 			background: #fff;

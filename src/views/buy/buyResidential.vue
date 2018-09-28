@@ -65,8 +65,8 @@
 
 <style scoped lang="scss">
 	@import '@/assets/sass/mixins/responsive.scss';
-
 	.buy-residential {
+		padding-bottom: 20px;
 		.content {
 			margin-top: 35px;
 
@@ -92,12 +92,12 @@
 			}
 
 			.main {
-				height: 544px;
+				min-height: 400px;
 				padding: 0;
 				background: #fff;
 
 				.title {
-					font-size: 14px;
+					font-size: 20px;
 					padding: 10px 20px;
 					font-weight: 800;
 				}

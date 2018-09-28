@@ -65,7 +65,6 @@
 		@include transitionAll;
 		@include media-xs{
 			padding-bottom: 10px;
-			box-shadow: 0px 20px 10px black;
 		}
 		.main {
 			display: block;

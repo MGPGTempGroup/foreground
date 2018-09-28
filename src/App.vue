@@ -143,18 +143,19 @@
 		background-attachment: fixed;
 		.router-view {
 			margin: 35px auto;
-			margin-bottom: 90px;
 			max-width: 1200px;
 			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
 			opacity: .97;
 			@include media-md {
-				margin: 30px auto;
+				margin-bottom: 30px;
 			}
 			@include media-sm {
-				margin: 20px auto;
+				margin-top: 0px;
+				margin-bottom: 20px;
 			}
 			@include media-xs {
-				margin: 10px auto;
+				margin-top: 0px;
+				margin-bottom: 20px;
 			}
 		}
 		.to-top {

@@ -33,8 +33,8 @@
 
 		.content {
 			border-bottom: 1px #aaa solid;
-			margin: 35px 0;
-			padding: 30px 0;
+			padding: 35px 0;
+			text-shadow: 0px 0px 10px black;
 
 			@include media-md {
 				margin-top: 30px;
@@ -52,10 +52,13 @@
 			}
 
 			.title {
-				font-size: 20px;
+				margin-bottom: 20px;
+				font-size: 30px;
 				font-weight: 800;
 				line-height: 40px;
+				letter-spacing: 1px;
 				padding: 0 10px;
+				color: white;
 			}
 		}
 	}
