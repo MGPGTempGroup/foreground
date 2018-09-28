@@ -1,37 +1,39 @@
 <template>
-	<el-col :sm="12" :md="8" :lg="8" class="container">
-		<div class="main">
-			<div class="img-box">
-				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537655193446&di=f867d1a471fe4a4642c4f6df98ed32f2&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F908fa0ec08fa513d14e7ade2366d55fbb2fbd9b9.jpg">
+	<el-col :sm="12" :md="8" :lg="8" class="hbox-container">
+		<el-card shadow="hover" body-style="padding: 0px;" >
+			<div class="main">
+				<div class="img-box">
+					<img src="https://www.melbournerealestate.com.au/wp-content/uploads/2018/05/White-St-Thumbnail-640x462.jpg">
+				</div>
 			</div>
-		</div>
-		<div class="foot">
-			<div class="address">
-				107/26 Beaurepaire Parade Footscray VIC
+			<div class="foot">
+				<div class="address">
+					107/26 Beaurepaire Parade Footscray VIC
+				</div>
+				<div class="information">
+					<font>Available Date: Thursday October 18, 2018 </font>
+					<font>Apartment: $350 per week</font>
+					<font>Agent: Bronson Linington</font>
+				</div>
+				<div class="other">
+					<el-row :gutter="20">
+						<el-col :span="8">
+							<div class="fill"></div>
+							1
+						</el-col>
+						<el-col :span="8">
+							<div class="fill"></div>
+							1
+						</el-col>
+						<el-col :span="8">
+							<div class="fill"></div>
+							1
+						</el-col>
+					</el-row>
+					<div class="btn">Book an Inspection</div>
+				</div>
 			</div>
-			<div class="information">
-				<font>Available Date: Thursday October 18, 2018 </font>
-				<font>Apartment: $350 per week</font>
-				<font>Agent: Bronson Linington</font>
-			</div>
-			<div class="other">
-				<el-row :gutter="20">
-					<el-col :span="8">
-						<div class="fill"></div>
-						1
-					</el-col>
-					<el-col :span="8">
-						<div class="fill"></div>
-						1
-					</el-col>
-					<el-col :span="8">
-						<div class="fill"></div>
-						1
-					</el-col>
-				</el-row>
-				<div class="btn">Book an Inspection</div>
-			</div>
-		</div>
+		</el-card>
 	</el-col>
 </template>
 <script>
@@ -46,14 +48,24 @@
 </script>
 <style scoped lang="scss">
 	@import '@/assets/sass/mixins/responsive.scss';
+	@import '@/assets/sass/mixins/transition.scss';
 
-	.container {
-		padding-bottom: 20px;
+	// debug: 之前的class直接就是container 和父组件中的.container冲突了，写效果会出现问题（父组件style scoped的作用域包含子组件）
+	// 注释待删除
+	.hbox-container {
+		position: relative;
+		padding-bottom: 40px; // 改成40了，否则列表和筛选器显示不正常，筛选组件下面空了一大白
 		cursor: pointer;
 		@include media-xs {
 			padding-bottom: 10px;
 		}
-
+		&:hover {
+			.img-box {
+				img {
+					transform: scale(1.2, 1.2);
+				}
+			}
+		}
 		.main {
 			display: block;
 			position: relative;
@@ -64,21 +76,21 @@
 				height: 0;
 				padding-left: 100%;
 				padding-bottom: 70%;
-
+				overflow: hidden;
 				>img {
 					position: absolute;
 					width: 100%;
 					height: 100%;
 					top: 0;
 					left: 0;
+					@include transitionAll;
 				}
 			}
+
 		}
 
 		.foot {
 			padding: 10px;
-			background: #fff;
-
 			>.address {
 				font-size: 15px;
 				font-weight: 800;
@@ -137,7 +149,7 @@
 					line-height: 31px;
 					border-radius: 3px;
 					border: 2px solid #FF6600;
-
+					@include transitionAll;
 					&:hover {
 						color: #fff;
 						background: #FF6600;
@@ -147,17 +159,23 @@
 
 		}
 
-		&:hover {
-			>.main:after {
-				position: absolute;
-				width: 100%;
-				top: 0;
-				bottom: 0;
-				z-index: 1000;
-				content: '';
-				background: rgba(0, 0, 0, .2);
-			}
-		}
+	}
 
+	// 遮罩层
+	.mask {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0);
+			@include transitionAll;
+		}
+</style>
+
+<style>
+	.el-card {
+		border: 0px;
 	}
 </style>
+
