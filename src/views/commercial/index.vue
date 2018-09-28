@@ -69,6 +69,18 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 
 	.commercial {
+
+		&-content {
+			@include media-lg-up {
+				padding-right: 32px !important;
+			}
+			@include media-sm-down {
+				img {
+					width: 100%;
+				}
+			}
+		}
+
 		.content {
 			margin-top: 35px;
 
@@ -89,21 +101,6 @@
 
 			padding-bottom: 33px;
 
-
-
-			&-content {
-				padding-right: 20px;
-
-				>* {
-					padding: 10px 10px;
-				}
-
-				@include media-sm-down {
-					img {
-						width: 100%;
-					}
-				}
-			}
 		}
 	}
 </style>
