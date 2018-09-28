@@ -1,7 +1,7 @@
 <template>
   <main class="contact-us" >
     <div class="contact-us-map" >
-      <h1 style="text-align: center;" >此处待引入Google Map</h1>
+      <div ref="googleMap" style="width: 100%; height: 500px;" class="google-map" ></div>
     </div>
     <el-row class="content">
       <el-col class="contact-us-content" :lg="18" >
@@ -18,6 +18,7 @@
 
 <script>
   import ContactsCard from '@/components/Contacts'
+  import google from 'google-map'
   export default {
     name: 'marketing-page',
     components: {
@@ -38,6 +39,17 @@
           }
         }
       }
+    },
+    mounted() {
+      var mapType = google.maps.MapTypeId.ROADMAP;
+      var lat = 145, lng = 39, zoom = 10;
+      var mapOptions = {
+          center: new google.maps.LatLng(lat, lng),  //地图的中心点
+          zoom: zoom,               　　　　　　　　　　//地图缩放比例
+          mapTypeId: mapType,       　　　　　　　　　　//指定地图展示类型：卫星图像、普通道路
+          scrollwheel: true          　　　　　　　　　 //是否允许滚轮滑动进行缩放
+      };
+      var map = new google.maps.Map(document.getElementsByClassName("google-map")[0], mapOptions); //创建谷歌地图
     }
   }
 </script>
