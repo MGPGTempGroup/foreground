@@ -1,8 +1,8 @@
 <template>
 	<el-col :sm="12" :md="8" :lg="8" class="container">
-		<div class="main">
+		<el-card class="main" body-style="padding: 5px;" shadow="hover">
 			<div class="head">
-				<div class="title">Looking to Rent?</div>
+				<div class="title">Title</div>
 				<el-popover placement="bottom-end" trigger="hover" style="width: 100px;">
 					<ul class="share-box">
 						<font class="title">share</font>
@@ -25,7 +25,7 @@
 			<router-link :to="to" >
 				<div class="main">
 					<div class="img-box">
-						<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537655193446&di=f867d1a471fe4a4642c4f6df98ed32f2&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F908fa0ec08fa513d14e7ade2366d55fbb2fbd9b9.jpg">
+						<img src="https://www.melbournerealestate.com.au/wp-content/uploads/2018/05/White-St-Thumbnail-640x462.jpg">
 					</div>
 				</div>
 				<div class="foot">
@@ -34,7 +34,7 @@
 					</font>
 				</div>
 			</router-link>
-		</div>
+		</el-card>
 	</el-col>
 </template>
 <script>
@@ -57,6 +57,7 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 	.container {
 		padding-bottom: 20px;
+
 		@include media-xs{
 			padding-bottom: 10px;
 		}
@@ -65,7 +66,7 @@
 			display: block;
 			position: relative;
 			cursor: pointer;
-
+			
 			.head {
 				position: relative;
 				height: 40px;
@@ -78,11 +79,12 @@
 				}
 
 				.el-icon-more {
+					// 暂时调整了，问题是popover弹出的位置和这里的间距太大了，代码待优化
 					position: absolute;
-					top: 0;
-					right: 0;
-					padding: 10px;
-					line-height: 20px;
+					top: 15px;
+					right: 5px;
+					height: 10px;
+					line-height: 0px;
 					font-size: 20px;
 				}
 
@@ -93,24 +95,19 @@
 				}
 			}
 
-			.main {
-				display: block;
+			.img-box {
 				position: relative;
+				width: 0;
+				height: 0;
+				padding-left: 100%;
+				padding-bottom: 70%;
 
-				.img-box {
-					position: relative;
-					width: 0;
-					height: 0;
-					padding-left: 100%;
-					padding-bottom: 70%;
-
-					>img {
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						top: 0;
-						left: 0;
-					}
+				>img {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
 				}
 			}
 
@@ -118,12 +115,11 @@
 				height: 40px;
 				line-height: 40px;
 				padding: 0 10px;
-				border-left: 1px solid #000;
-				border-bottom: 1px solid #000;
-
+	
 				>font {
 					font-weight: 800;
 				}
+
 			}
 
 			&:hover {
