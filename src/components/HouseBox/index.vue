@@ -1,6 +1,6 @@
 <template>
 	<el-col :sm="12" :md="8" :lg="8" class="hbox-container">
-		<el-card style="border: 0px;" shadow="hover" body-style="padding: 0px;" >
+		<el-card style="border: 0px;" shadow="hover" body-style="padding: 0px; padding-bottom: 8px;" >
 			<div class="main">
 				<div class="img-box">
 					<img src="https://www.melbournerealestate.com.au/wp-content/uploads/2018/05/White-St-Thumbnail-640x462.jpg">
@@ -18,15 +18,15 @@
 				<div class="other">
 					<el-row :gutter="20">
 						<el-col :span="8">
-							<div class="fill"></div>
+							<i class="fa fa-bed" ></i>
 							1
 						</el-col>
 						<el-col :span="8">
-							<div class="fill"></div>
+							<i class="fa fa-shower"></i>
 							1
 						</el-col>
 						<el-col :span="8">
-							<div class="fill"></div>
+							<i class="fa fa-car" ></i>
 							1
 						</el-col>
 					</el-row>
@@ -69,7 +69,6 @@
 		.main {
 			display: block;
 			position: relative;
-
 			.img-box {
 				position: relative;
 				width: 0;
@@ -126,12 +125,8 @@
 						max-width: 100px;
 						text-align: center;
 						font-size: 15px;
-						font-weight: 800;
-
-						>.fill {
-							background: #000;
-							padding-bottom: 100%;
-							border-radius: 100px;
+						i {
+							font-size: 20px;
 						}
 					}
 
