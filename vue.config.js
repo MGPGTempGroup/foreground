@@ -5,7 +5,5 @@ module.exports = {
       'element-ui': 'Element',
       'google-map': 'google'
     }
-  },devServer: {
-		host: '0.0.0.0'
-	}
+  }
 }
