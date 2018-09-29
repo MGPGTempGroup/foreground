@@ -22,7 +22,7 @@
 export default {
   name: 'contacts',
   props: {
-    contactList: Object, // { "Georgina Mellick — Project Sales Director": ['contact 1', 'contact 2'] }
+    contactList: Object, // { "Georgina Mellick — Project Sales Director": { "Direct": 'xxx', "Mobile": 'xxxx' } }
     title: {
       type: String,
       default: 'Contacts'

@@ -1,133 +1,93 @@
 <template>
-	<main class="container">
-		<top-info textHtml="An award winning team of<br>
-				industry professionals that promise<br>
-				to deliver wow service."></top-info>
-		<div class="top-info">
-			<div class="text" ref="text">
-
-			</div>
-		</div>
-		<div class="content">
-			<el-row class="staff-list" v-for="(item,index) in 5" :key="index">
-				<el-col :sm="8" :md="6" :lg="6" class="staff-left-content">
-					<div class="main">
-						<div class="img-box">
-							<img src="https://www.melbournerealestate.com.au/wp-content/uploads/2014/04/Jason-Low-2.png">
-						</div>
-						<div class="info">
-							Jason Low Headshot<br>
-							Jason Low 刘青纬<br>
-							Phone 联系电话 +61 3 9829 2923<br>
-							Mobile 手机 +61 499 847 888<br>
-							Email 电子邮件 jason@melbournerealestate.com.au<br>
-							WeChat 微信 jasonmre
-						</div>
-					</div>
-
-				</el-col>
-				<el-col :sm="16" :md="18" :lg="18" class="staff-right-content">
-					<div class="main">
-						<p><strong>Background 背景 - Singapore 新加坡<br>
-								Languages spoken 语言 - Mandarin, Teochew, Hokkien & English 中英文，潮州话，闽南语</strong></p>
-						<p>刘青纬先生具有信息技术学士学位，自2013年进入墨尔本地产以来，为公司带入了纪律，勤奋和卓越的时间管理能力。他具有关于亚洲房地产市场和规范的丰富知识，并能说流利的中英文，潮州话，闽南语。他与众多中国开发商的出色工作为他赢得了良好的赞誉。</p>
-						<p>Jason has a Bachelor in Information Technology behind him; Jason joined MRE in 2013, bringing discipline,
-							diligence
-							and excellent time management skills into the mix.</p>
-						<p>Fluent in Teochew and Hokkien Chinese dialects and with a sound knowledge of Asian property markets and
-							regulations, he is highly regarded for his work with Chinese developers.</p>
-					</div>
-				</el-col>
-			</el-row>
-		</div>
-	</main>
+  <main class="your-language" >
+    <main-swiper class="your-language__swiper" ></main-swiper>
+    <el-row class="your-language__layout" >
+      <el-col :lg="17" class="your-language__content-wrapper" >
+        <el-card class="your-language__content" >
+          <h2>墨尔本地产物业管理</h2>
+          <p>墨尔本地产致力于打造新一代的物业管理模式， 自2006年以来，我们获得了五个维省房地产行业大奖，三个全国地产行业大奖。我们成功的原因有很多，但最重要的一点是我们坚持履行对客户的承诺，把客户的物业视如己出。</p>
+          <p>
+            <img src="http://www.melbournerealestate.com.au/wp-content/uploads/2014/05/Property_Management_Image.jpg" alt="">
+          </p>
+          <strong style="font-size: 20px;" >分享</strong>
+          <share-card style="margin-top: 10px;" />
+        </el-card>
+      </el-col>
+      <el-col :lg="7" class="your-language__side" >
+        <el-row :gutter="12" >
+          <el-col :sm="12" :md="12" :lg="24" >
+            <el-card class="your-language__form-wrapper" >
+              <h4 slot="header">如果您对我们的服务感兴趣，请您留下您的物业地址，我们会为您准备一份免费的房屋 租赁/销售 评估：</h4>
+              <common-form class="your-language__form" ></common-form>
+            </el-card>
+          </el-col>
+          <el-col :sm="12" :md="12" :lg="24" >
+            <contacts-card title="联系人" :contactList="contacts" style="margin-top: 20px;" ></contacts-card>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
+  </main>
 </template>
 
 <script>
-	import TopInfo from '@/components/TopInfo'
-	import MainBox from '@/components/MainBox'
-	export default {
-		components: {
-			TopInfo,
-			MainBox
-		},
-		name: 'we-speak-yourlanguage-page'
-	}
+  import MainSwiper from '@/components/MainSwiper'
+  import ShareCard from '@/components/ShareCard'
+  import CommonForm from '@/components/CommonForm'
+  import ContactsCard from '@/components/Contacts'
+  export default {
+    name: 'we-speak-your-language-page',
+    components: {
+      MainSwiper,
+      ShareCard,
+      CommonForm,
+      ContactsCard
+    },
+    data() {
+      return {
+        contacts: { "Jason Low 刘青纬 – 亚洲商务发展及销售总监": { "direct": '+61 499 847 888', "mobile": 'jasonmre', 'email': 'jason@melbournerealestate.com.au' } }
+      }
+    }
+  }
 </script>
 
-<style scoped lang="scss">
-	@import '@/assets/sass/mixins/responsive.scss';
-
-	.container {
-		.staff-list {
-			margin-top: 35px;
-
-			@include media-md {
-				margin-top: 30px;
-			}
-
-			@include media-sm {
-				margin-top: 20px;
-			}
-
-			@include media-xs {
-				margin-top: 10px;
-				padding: 0 10px;
-			}
-
-			>.staff-left-content {
-
-				@include media-sm {
-					padding-right: 10px;
-				}
-
-				@include media-md-up {
-					padding-right: 20px;
-				}
-
-				>.main {
-					background: #fff;
-
-					.img-box {
-						position: relative;
-						width: 0;
-						height: 0;
-						padding-left: 100%;
-						padding-bottom: 100%;
-
-						>img {
-							position: absolute;
-							width: 100%;
-							height: 100%;
-							top: 0;
-							left: 0;
-						}
-					}
-
-					.info {
-						padding: 10px;
-					}
-				}
-
-			}
-
-			.staff-right-content {
-				vertical-align: top;
-
-				>.main {
-					background: #fff;
-
-					>p {
-						padding: 12px;
-						margin: 0;
-					}
-				}
-			}
-
-		}
-	}
+<style scoped lang="scss" >
+  @import '@/assets/sass/mixins/responsive.scss';
+  .your-language {
+    &__layout {
+      margin-top: 20px;
+      @include media-md{
+        margin-top: 30px;
+        padding:0 30px;
+      }
+      @include media-sm{
+        margin-top: 20px;
+        padding:0 20px;
+      }
+      @include media-xs{
+        margin-top: 10px;
+        padding:0 10px;
+      }
+    }
+    &__content-wrapper {
+      @include media-lg-up {
+        padding-right: 32px;
+      }
+    }
+    &__content {
+      padding-bottom: 10px;
+      img {
+        @include media-xs {
+          width: 100%;
+        }
+      }
+    }
+    &__form-wrapper {
+      @include media-md-down {
+        margin-top: 20px;
+      }
+    }
+  }
 </style>
 
 
-<style>
-</style>
