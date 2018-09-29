@@ -38,7 +38,7 @@
 						</div>
 					</div>
 				</el-col>
-				<house-box v-for="(item,index) in 11" :key="index"></house-box>
+				<house-box to="/buy-residential/12" v-for="(item,index) in 11" :key="index"></house-box>
 			</el-row>
 			<div class="load-more">Load More</div>
 		</div>

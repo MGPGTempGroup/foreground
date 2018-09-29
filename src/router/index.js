@@ -19,6 +19,7 @@ import success from '@/views/projects/success'
 // 购买
 import newDevelopments from '@/views/buy/newDevelopments'
 import buyResidential from '@/views/buy/buyResidential'
+import houseDetail from '@/views/buy/houseDetail'
 
 // 租房
 import renting from '@/views/rent'
@@ -106,6 +107,11 @@ export default new Router({
 			path: '/buy-residential',
 			name: 'buyResidential',
 			component: buyResidential
+		},
+		{
+			path: '/buy-residential/:id',
+			name: 'houseDetail',
+			component: houseDetail
 		},
 		{
 			path: '/selling',
