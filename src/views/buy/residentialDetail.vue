@@ -72,7 +72,7 @@
 import mainSwiper from '@/components/MainSwiper'
 import ContactsAgent from '@/components/Contacts/Agent'
 export default {
-  name: 'house-detail',
+  name: 'residential-detail',
   components: {
     mainSwiper,
     ContactsAgent
