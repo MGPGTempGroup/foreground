@@ -17,6 +17,10 @@
 						is sold for an exceptional price. We believe selling is a transfer of enthusiasm.</p>
 					<p>
 						Our track record shows we’re one of the top inner-city apartment specialists in Melbourne.</p>
+					<div style="margin-top: 27px;" >
+						<strong style="font-size: 21px;" >Share</strong>
+						<share-card style="margin-top: 5px;" />
+					</div>
 				</el-card>
 			</el-col>
 			<el-col class="content-form" :md="24" :lg="7">
@@ -39,12 +43,14 @@
 	import TopInfo from '@/components/TopInfo'
 	import CommonForm from '@/components/CommonForm'
 	import ContactsCard from '@/components/Contacts'
+	import ShareCard from '@/components/ShareCard'
 	export default {
 		name: 'selling-page',
 		components: {
 			TopInfo,
 			CommonForm,
-			ContactsCard
+			ContactsCard,
+			ShareCard
 		},
 		data() {
 			return {
@@ -101,7 +107,9 @@
 
 			&-desc {
 				&-inner {
-					padding: 0px 10px;
+					@include media-lg-up {
+						padding: 10px 10px 15px 10px;
+					}
 
 					@include media-sm-down {
 						img {

@@ -16,6 +16,11 @@
 					<p class="p1">If you wish to apply for one of our listed properties, please fill out an&nbsp;<strong><a title="Apply Online"
 							 href="https://1form.com/au/tenant/application/start/tagid/612" target="_blank" rel="noopener">online
 								application</a></strong>.</p>
+
+					<div style="margin-top: 27px;" >
+						<strong style="font-size: 21px;" >Share</strong>
+						<share-card style="margin-top: 5px;" />
+					</div>
 				</el-card>
 			</el-col>
 		</el-row>
@@ -24,10 +29,12 @@
 
 <script>
 	import MainSwiper from '@/components/MainSwiper'
+	import ShareCard from '@/components/ShareCard'
 	export default {
 		name: 'prospective-tenants-page',
 		components: {
-			MainSwiper
+			MainSwiper,
+			ShareCard
 		}
 	}
 </script>
@@ -56,6 +63,7 @@
 				&-inner {
 					@include media-lg-up {
 						padding: 0px 10px;
+						padding-bottom: 15px;
 					}
 				}
 

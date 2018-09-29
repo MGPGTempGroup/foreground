@@ -3,7 +3,7 @@
 		<main-swiper></main-swiper>
 		<el-row class="content">
 			<el-col class="commercial-content" :lg="17">
-				<el-card style="padding-bottom: 10px;" >
+				<el-card>
 					<p><strong>Melbourne Real Estate is leading the way in Commercial Property Management</strong></p>
 					<p>We bring our knowledge, expertise, contacts and award-winning business practices to deliver an unprecedented
 						level of service to every client every day.</p>
@@ -73,7 +73,7 @@
 		&-content {
 			> * {
 				@include media-lg-up {
-					padding: 0px 10px;
+					padding: 0px 10px 15px 10px;
 				}
 			}
 			@include media-lg-up {

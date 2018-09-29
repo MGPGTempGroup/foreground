@@ -59,6 +59,10 @@
 						The York – 8 Olive York Way, Brunswick West<br>
 						Palmer Street – 1 Palmer Street, Richmond<br>
 						Hive – 636 High Street, Thornbury</p>
+						<div style="margin-top: 27px;" >
+							<strong style="font-size: 21px;" >Share</strong>
+							<share-card style="margin-top: 5px;" />
+						</div>
 				</el-card>
 			</el-col>
 			<el-col class="leasing-form" :lg="6">
@@ -76,11 +80,13 @@
 <script>
 	import MainSwiper from '@/components/MainSwiper'
 	import CommonForm from '@/components/CommonForm'
+	import ShareCard from '@/components/ShareCard'
 	export default {
 		name: 'leasing-page',
 		components: {
 			MainSwiper,
-			CommonForm
+			CommonForm,
+			ShareCard
 		}
 	}
 </script>
@@ -125,7 +131,7 @@
 		&-content {
 			@include media-lg-up {
 				> * {
-					padding: 10px 10px;
+					padding: 10px 10px 15px 10px;
 				}
 			}
 			@include media-lg-up {

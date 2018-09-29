@@ -49,6 +49,10 @@
 						to none.</p>
 					<p>From concept to completion, MRE are there for the long haul.</p>
 					<p>We stake our reputation on it.</p>
+					<div style="margin-top: 27px;" >
+						<strong style="font-size: 21px;" >Share</strong>
+						<share-card style="margin-top: 5px;" />
+					</div>
 				</el-card>
 			</el-col>
 			<el-col class="marketing-contacts" :lg="6">
@@ -61,11 +65,13 @@
 <script>
 	import MainSwiper from '@/components/MainSwiper'
 	import ContactsCard from '@/components/Contacts'
+	import ShareCard from '@/components/ShareCard'
 	export default {
 		name: 'marketing-page',
 		components: {
 			MainSwiper,
-			ContactsCard
+			ContactsCard,
+			ShareCard
 		},
 		data() {
 			return {
@@ -124,7 +130,7 @@
 		&-content {
 			@include media-lg-up {
 				> * {
-					padding: 10px 10px;
+					padding: 10px 10px 15px 10px;
 				}
 			}
 
