@@ -138,9 +138,9 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 
 	.careers {
+			
 		.content {
 			margin-top: 35px;
-
 			@include media-md {
 				margin-top: 30px;
 				padding: 0 30px;
@@ -172,15 +172,14 @@
 		}
 
 		&-content {
+			> * {
+				@include media-lg-up {
+					padding: 0px 10px;
+				}
+			}
 			@include media-lg-up {
 				padding-right: 32px;
 			}
-
-
-			>* {
-				padding: 10px 10px;
-			}
 		}
-
 	}
 </style>

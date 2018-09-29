@@ -170,6 +170,7 @@
 		}
 		.router-view {
 			margin: 35px auto;
+			padding-bottom: .6rem;
 			max-width: 1200px;
 			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
 			opacity: .97;

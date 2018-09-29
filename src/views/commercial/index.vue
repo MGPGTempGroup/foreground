@@ -71,6 +71,11 @@
 	.commercial {
 
 		&-content {
+			> * {
+				@include media-lg-up {
+					padding: 0px 10px;
+				}
+			}
 			@include media-lg-up {
 				padding-right: 32px !important;
 			}

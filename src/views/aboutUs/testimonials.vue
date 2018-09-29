@@ -3,13 +3,12 @@
 		<top-info textHtml="“To avoid criticism say nothing,<br>
 				do nothing, be nothing.”<br>
 				<small>Aristotle</small>"></top-info>
-
 		<el-row class="content">
 			<el-col :lg="17" class="comments">
 				<el-card>
 					<ul>
 						<service-comment tag="li" v-for="(item, index) in 20" :key="index" class="comments-item" name="Jane Perry" date="21, September, 2015">
-							呵呵呵呵哈哈哈哈嘻嘻嘻
+							Melbourne Real Estate is a very professional team of Property Managers. I’ve been a client with MRE for over 3 years now and I sometimes forget that I have an investment property. They will contact you when there is a problem and will already have suggestions for you to fix the problems. We have another investment property that is managed by another Real Estate Agent but how I wish MRE is also looking after that property, due to the location MRE is unable to manage our second property. I can tell the HUGE difference in terms of service and professionalism between the two Real Estate Agents. Thank you MRE!
 						</service-comment>
 					</ul>
 				</el-card>
@@ -111,10 +110,8 @@
 			.form {
 
 				@include media-md-down {
-					margin-top: 40px;
+					margin-top: 20px;
 				}
-
-				;
 			}
 		}
 	}
