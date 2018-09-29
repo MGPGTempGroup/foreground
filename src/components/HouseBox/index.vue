@@ -1,6 +1,6 @@
 <template>
 	<el-col :sm="12" :md="8" :lg="8" class="hbox-container">
-		<router-link :to="to" >
+		<router-link class="hbox-link" :to="to" >
 			<el-card style="border: 0px;" shadow="hover" body-style="padding: 0px; padding-bottom: 8px;" >
 				<div class="main">
 					<div class="img-box">
@@ -58,6 +58,10 @@
 	@import '@/assets/sass/mixins/responsive.scss';
 	@import '@/assets/sass/mixins/transition.scss';
 
+	.hbox-link {
+		text-decoration: none;
+	}
+
 	// debug: 之前的class直接就是container 和父组件中的.container冲突了，写效果会出现问题（父组件style scoped的作用域包含子组件）
 	// 注释待删除
 	.hbox-container {
@@ -99,10 +103,9 @@
 		.foot {
 			padding: 10px;
 			>.address {
-				font-size: 15px;
+				font-size: 17px;
 				font-weight: 800;
-				border-top: 1px solid #000;
-				line-height: 50px;
+				line-height: 58px;
 			}
 
 			>.information {
@@ -114,6 +117,9 @@
 
 				>font {
 					display: block;
+					&:first-of-type ~ font {
+						margin-top: 10px;
+					}
 				}
 			}
 

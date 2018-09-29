@@ -41,7 +41,7 @@
 								</el-option>
 							</el-select>
 						</div>
-						<div class="box" style="padding-top:30px ;">
+						<div class="box" style="padding-top:10px;">
 							<el-checkbox v-model="checked" style="margin-bottom: 10px;width: 50%;">Furnished</el-checkbox>
 							<el-select v-model="value" size="small" style="margin-bottom: 10px;width: 50%;">
 								<el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
@@ -101,7 +101,6 @@
 		}
 
 		.search {
-			padding-bottom: 20px;
 			cursor: pointer;
 
 			@include media-xs {
@@ -109,9 +108,11 @@
 			}
 
 			.main {
-				height: 544px;
+				height: 524px;
 				padding: 0;
+				padding-top: 10px;
 				background: #fff;
+				border-radius: 5px;
 
 				.title {
 					font-size: 20px;
@@ -121,8 +122,6 @@
 
 				.box {
 					padding: 10px 20px;
-					border-bottom: 1px #E5E5E5 solid;
-
 					.btn-box {
 						width: 50%;
 						display: inline-block;
