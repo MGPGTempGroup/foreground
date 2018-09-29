@@ -122,8 +122,10 @@
 		}
 
 		&-content {
-			>* {
-				padding: 10px 10px;
+			@include media-lg-up {
+				> * {
+					padding: 10px 10px;
+				}
 			}
 
 			@include media-lg-up {

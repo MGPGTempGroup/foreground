@@ -81,7 +81,9 @@
 			}
 			&-desc {
         &-inner {
-					padding: 10px 10px;
+					@include media-lg-up {
+						padding: 0px 10px;
+					}
 				}
 				@include media-md-down {
 					padding: 0px 10px;

@@ -42,7 +42,7 @@
 
 	.areas-we-serve {
 		.content {
-			margin-top: 35px;
+			margin-top: 24px;
 			@include media-md{
 				margin-top: 30px;
 				padding:0 30px;
@@ -56,36 +56,15 @@
 				padding:0 10px;
 			}
 			&-inner {
-				margin: 35px 0;
-				@include media-md{
-					margin: 30px 0;
-					padding:0 30px;
-				}
-				@include media-sm{
-					margin: 20px 0;
-					padding:0 20px;
-				}
-				@include media-xs{
-					margin: 10px 0;
-					padding:0 10px;
-				}
-
+				margin-bottom: 20px;
 				&-desc {
 					>p {
 						font-size: 18px;
 						color: #343434;
 					}
 
-					@include media-xs {
-						padding: 0px 10px !important;
-					}
-
-					@include media-sm {
-						padding: 0px 20px !important;
-					}
-
-					@include media-md {
-						padding: 0px 20px !important;
+					@include media-lg-up {
+						padding: 0px 5px;
 					}
 
 					@include media-custom(1200px, 1330px) {

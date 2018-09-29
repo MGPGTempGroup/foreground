@@ -126,7 +126,9 @@
 			&-desc {
 
 				&-inner {
-					padding: 0px 10px;
+					@include media-lg-up {
+						padding: 0px 10px;
+					}
 				}
 
 				@include media-md {
