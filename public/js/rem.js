@@ -1,4 +1,4 @@
-window.onload = function(){
+;window.onload = function(){
   getRem(1920,100)
 };
 window.onresize = function(){
