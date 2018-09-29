@@ -3,11 +3,10 @@
 		<top-info img="https://www.melbournerealestate.com.au/wp-content/uploads/2015/09/External-V1_View-from-Dyer-Lane-Copy.jpg"></top-info>
 		<div class="content">
 			<el-row gutter='20'>
-				<main-box v-for="(item,index) in 9" :key="index"></main-box>
+				<main-box to="/new-developments/little-oxford" v-for="(item,index) in 9" :key="index"></main-box>
 			</el-row>
 			<div class="load-more">Load More</div>
 		</div>
-
 	</main>
 </template>
 

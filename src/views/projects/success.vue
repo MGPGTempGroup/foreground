@@ -3,7 +3,7 @@
 		<top-info textHtml="Past Success" img="https://www.melbournerealestate.com.au/wp-content/uploads/2014/07/Past_Success_Hero.jpg"></top-info>
 		<div class="content">
 			<el-row gutter='20'>
-				<main-box v-for="item in 9"></main-box>
+				<main-box to="/new-developments/little-oxford" :key="index" v-for="(item, index) in 9"></main-box>
 			</el-row>
 		</div>
 	</div>
