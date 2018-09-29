@@ -42,6 +42,7 @@ import testimonials from '@/views/aboutUs/testimonials'
 
 // 更新/升级
 import industryUpdates from '@/views/industryUpdates'
+import industryUpdatesDetails from '@/views/industryUpdates/details'
 
 //用您的语言进行交流
 import weSpeakYourlanguage from '@/views/weSpeakYourlanguage'
@@ -156,6 +157,11 @@ export default new Router({
 			path: '/industry-updates',
 			name: 'industryUpdates',
 			component: industryUpdates
+		},
+		{
+			path: '/industry-updates/:title',
+			name: 'industryUpdatesDetails',
+			component: industryUpdatesDetails
 		},
 		{
 			path: '/we-speak-your-language',

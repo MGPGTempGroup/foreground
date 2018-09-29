@@ -3,7 +3,7 @@
 		<top-info textHtml="Industry Updates"></top-info>
 		<div class="content">
 			<el-row gutter='20'>
-				<main-box v-for="(item,index) in 9" :key="index"></main-box>
+				<main-box to="industry-updates/title" v-for="(item,index) in 9" :key="index"></main-box>
 			</el-row>
 			<div class="load-more">Load More</div>
 		</div>
