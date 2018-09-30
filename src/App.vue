@@ -20,7 +20,7 @@
 				<i class="el-icon-arrow-up"></i>
 			</div>
 			<!-- 背景（filter） -->
-			<img class="bg recovery" src="/images/background/城市,天空,天际线,建筑物cc0可商用高清图片_千叶网.jpeg" alt="">
+			<img class="bg recovery" src="/images/background/爱西西_高层建筑背景下水船_编号234127.jpg" alt="">
 		</div>
 	</div>
 </template>

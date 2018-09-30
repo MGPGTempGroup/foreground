@@ -27,6 +27,7 @@
           </el-row>
           <h2>Stylish Living at Vogue Apartments</h2>
           <p class="listing">Vogue,  enviably situated in a South Yarra side street off buzzing Chapel Street, the coveted Vogue Apartment complex is moments from South Yarra train station, tram stops and the Jam Factory shopping/dining and entertainment precinct, with direct access to its own ground level retail stores and supermarket.<br><br>This practically oriented apartment,  delivering space, light and stunning views, comprises an immaculate fully tiled bathroom, euro laundry, streamlined white galley kitchen with stone benches, stainless steel appliances, integrated dishwasher and considered storage cabinetry, open-plan and air-conditioned dining/living area and balcony. Two carpeted and good sized bedrooms each include BIR’s, with the master room sharing balcony access. Along with a secure basement car space, exclusive amenities include a resident building manager and state of the art security, tennis court, BBQ area and indoor heated 25m pool with sun deck, plus a well equipped gymnasium, spa and sauna. A direct lift to the Vogue Plaza also ensures you’ll never run out of milk again! Brilliant to live in or a great investment, Vogue Apartments are a sure thing.</p>
+          <p class="listing">Vogue,  enviably situated in a South Yarra side street off buzzing Chapel Street, the coveted Vogue Apartment complex is moments from South Yarra train station, tram stops and the Jam Factory shopping/dining and entertainment precinct, with direct access to its own ground level retail stores and supermarket.<br><br>This practically oriented apartment,  delivering space, light and stunning views, comprises an immaculate fully tiled bathroom, euro laundry, streamlined white galley kitchen with stone benches, stainless steel appliances, integrated dishwasher and considered storage cabinetry, open-plan and air-conditioned dining/living area and balcony. Two carpeted and good sized bedrooms each include BIR’s, with the master room sharing balcony access. Along with a secure basement car space, exclusive amenities include a resident building manager and state of the art security, tennis court, BBQ area and indoor heated 25m pool with sun deck, plus a well equipped gymnasium, spa and sauna. A direct lift to the Vogue Plaza also ensures you’ll never run out of milk again! Brilliant to live in or a great investment, Vogue Apartments are a sure thing.</p>
           <div class="show-desktop show-mobile" id="listing_details">
             <div class="details_section">
               <h3>Apartment for Sale</h3>
@@ -44,15 +45,10 @@
                 </ul>
               </div>
           </div>
-          <div class="share-post hide-mobile">
-            <h3>Share</h3>
-            <div>
-              <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.melbournerealestate.com.au%2Fbuy-residential%2F&amp;t=Buy Residential">Facebook</a></li>
-              <li><a target="_blank" href="https://twitter.com/home?status=https%3A%2F%2Fwww.melbournerealestate.com.au%2Fbuy-residential%2F">Twitter</a></li>
-              <li><a target="_blank" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.melbournerealestate.com.au%2Fbuy-residential%2F">Google+</a></li>
-              <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.melbournerealestate.com.au%2Fbuy-residential%2F&amp;title=Buy Residential&amp;summary=Listings+to+feed+through&amp;source=">Linkedin</a></li>
-            </div>
-          </div>
+          <div style="margin-top: 27px;" >
+						<strong style="font-size: 21px;" >Share</strong>
+						<share-card style="margin-top: 5px;" />
+					</div>
         </el-col>
         <el-col class="hd-col hd-col-right" :lg="7" >
           <div class="google-map" style="width: 100%; height: 300px;" ></div>
@@ -71,11 +67,13 @@
 <script>
 import mainSwiper from '@/components/MainSwiper'
 import ContactsAgent from '@/components/Contacts/Agent'
+import ShareCard from '@/components/ShareCard'
 export default {
   name: 'residential-detail',
   components: {
     mainSwiper,
-    ContactsAgent
+    ContactsAgent,
+    ShareCard
   },
   mounted() {
     var mapType = google.maps.MapTypeId.ROADMAP;

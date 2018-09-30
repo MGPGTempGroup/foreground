@@ -33,8 +33,10 @@
 
 		.content {
 			border-bottom: 1px #aaa solid;
+			&:last-of-type {
+				border-bottom: none;
+			}
 			padding: 35px 0;
-			text-shadow: 0px 0px 10px black;
 
 			@include media-md {
 				margin-top: 30px;
