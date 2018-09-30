@@ -25,8 +25,7 @@
 					<strong class="staff-info-desc" >Office Manager</strong>
 				</div>
 				<div class="staff-figcaption-abstract">
-					The Dream Builder. Manager And Matriarch. Ann Rogers has a talent for management. As right hand woman to MRE founder and director, Peter Hooymans, she serves as a linchpin of the company. A founding member of the agency, she is incredibly proud to have helped realise the vision of creating an award winning boutique real estate agency.
-					The Dream Builder. Manager And Matriarch. Ann Rogers has a talent for management. As right hand woman to MRE founder and director, Peter Hooymans, she serves as a linchpin of the company. A founding member of the agency, she is incredibly proud to have helped realise the vision of creating an award winning boutique real estate agency.
+					The Dream Builder. Manager And Matriarch. Ann Rogers has a talent for management. As right hand woman to MRE founder and director, Peter Hooymans, she serves as a linchpin of the company. A founding member of the agency, she is incredibly proud to have helped realise the vision of creating an award winning boutique real...
 				</div>
 			</figcaption>
 			<router-link class="staff-figure-link" :to="to" >
@@ -93,9 +92,7 @@
 					display: inline-block;
 					font-weight: 800;
 				}
-				&-description{
-
-				}
+				&-description{}
 			}
 		}
 		.staff-figure {
@@ -136,15 +133,9 @@
 				border-bottom: 1px solid white;
 			}
 			&-abstract {
-				height: 30%;
+				height: 50%;
 				margin-top: 9px;
 				font-size: 14px;
-				overflow: hidden;
-				text-overflow:ellipsis;
-				display: -webkit-box;
-				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 9;
-				overflow: hidden;
 			}
 		}
 	}
