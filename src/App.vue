@@ -1,7 +1,7 @@
 <template>
 	<div class="container" @touchmove="scroll">
 		<!-- 头部 -->
-		<header-top />
+		<header-top :dialogLoginVisible.sync="dialogLoginVisible" />
 
 		<!-- 导航条 -->
 		<navigation />
@@ -22,7 +22,34 @@
 			<!-- 背景（filter） -->
 			<img class="bg recovery" src="/images/background/爱西西_高层建筑背景下水船_编号234127.jpg" alt="">
 		</div>
+
+		<!-- 登录 Dialog -->
+		<el-dialog class="login-dialog" width="350px" :modal-append-to-body="true" title="Login" :visible.sync="dialogLoginVisible">
+			<el-form class="login-form" :model="loginForm">
+				<el-form-item>
+					<div slot="label" >
+						<i class="fa fa-user-o" ></i> &nbsp;Username
+					</div>
+					<el-input v-model="loginForm.username" autocomplete="off"></el-input>
+				</el-form-item>
+				<el-form-item>
+					<div slot="label" >
+						<i class="fa fa-lock" ></i> &nbsp;Password
+					</div>
+					<el-input v-model="loginForm.password" type="password" autocomplete="off"></el-input>
+				</el-form-item>
+			</el-form>
+			<div style="text-align: center; margin-top: 30px;" >
+				<a href="">Obtain my password</a>
+			</div>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="dialogLoginVisible = false">Cancel</el-button>
+        <el-button type="primary" @click="dialogLoginVisible = false">Login</el-button>
+      </div>
+    </el-dialog>
+
 	</div>
+	
 </template>
 
 <script>
@@ -102,7 +129,11 @@
 						content: 'xxxxx',
 						rate: 5
 					}
-				]
+				],
+				dialogLoginVisible: false,
+				loginForm: {
+
+				}
 			}
 		},
 		methods: {
@@ -202,3 +233,16 @@
 		}
 	}
 </style>
+
+<style>
+	.login-form {
+		
+	}
+	.login-dialog .el-dialog__body {
+		padding-top: 10px;
+	}
+	.login-form .el-form-item {
+		margin-bottom: 4px;
+	}
+</style>
+

@@ -9,7 +9,7 @@
         </div>
         <div :span="6" class="inner-pc-top-right" >
           <div class="inner-pc-top-right-login">
-            <a class="inner-pc-top-right-login-btn" type="warning" >
+            <a @click="$emit('update:dialogLoginVisible', true)" href="javascript:;" class="inner-pc-top-right-login-btn" type="warning" >
               <i style="font-size: 28px;" class="fa fa-user-circle-o" ></i>
               <div>Members Login</div>
               <figure>
@@ -28,7 +28,6 @@
         <navigation :show="true" mode="horizontal" />
       </div>
     </div>
-
     <div class="inner-mobile hidden-lg-and-up" >
       <div class="inner-mobile-top" >
         <div class="inner-mobile-top-left" >
@@ -44,6 +43,7 @@
       </div>
       <navigation class="inner-mobile-nav" :show="displayMobileNav" mode="vertical" />
     </div>
+
   </el-header>
 </template>
 
@@ -56,7 +56,8 @@
     },
     data() {
       return {
-        displayMobileNav: false
+        displayMobileNav: false,
+        dialogLoginVisible: false
       }
     }
   }
@@ -130,6 +131,11 @@
                 left: 0px;
                 top: 0px;
                 perspective: 200;
+                &:active {
+                  > div {
+                    box-shadow: -5px 5px 5px #D18E05 inset;
+                  }
+                }
                 &:hover {
                   > div {
                     width: 100%;
