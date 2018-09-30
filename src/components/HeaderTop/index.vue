@@ -8,10 +8,19 @@
           </router-link>
         </div>
         <div :span="6" class="inner-pc-top-right" >
-          <div class="inner-pc-top-right-temp">
-            待填充区域
-            <br>
-            地区选择 / 登陆注册
+          <div class="inner-pc-top-right-login">
+            <a class="inner-pc-top-right-login-btn" type="warning" >
+              <i style="font-size: 28px;" class="fa fa-user-circle-o" ></i>
+              <div>Members Login</div>
+              <figure>
+                <figcaption>
+                  <span>Members Login</span>
+                  <br>
+                  <span>MGPG Online 24 / 7</span>
+                </figcaption>
+                <div></div>
+              </figure>
+            </a>
           </div>
         </div>
       </div>
@@ -70,18 +79,95 @@
         box-sizing: border-box;
         &-left {
           &-logo {
-            width: 250px;
+            width: 210px;
           }
         }
         &-right {
-          margin-top: 30px;
-          &-temp {
-            width: 260px;
-            height: 80px;
-            text-align: center;
-            line-height: 37px;
-            color: #ccc;
-            border: 1px solid #ccc;
+          margin-top: 32px;
+          margin-right: 30px;
+          &-login {
+            box-shadow: 0px 7px 15px #1C1C1C;
+            border-radius: 10px;
+            &-btn {
+              position: relative;
+              display: flex;
+              align-items: center;
+              padding: 15px 15px;
+              line-height: 18px;
+              text-shadow: 0px 0px 6px rgba(0,0,0,.15);
+              background: #121212;
+              border-radius: 10px;
+              color: white;
+              cursor: pointer;
+              overflow: hidden;
+              transition: all .4s;
+              &:hover {
+                > figure {
+                  opacity: 1;
+                }
+              }
+              > div {
+                margin-left: 10px;
+                font-size: 14px;
+                
+                &:before {
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  left: 0%;
+                  top: 0%;
+                  background-color: red;
+                }
+              }
+              > figure {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0px;
+                width: 100%;
+                height: 100%;
+                left: 0px;
+                top: 0px;
+                perspective: 200;
+                &:hover {
+                  > div {
+                    width: 100%;
+                  }
+                  > figcaption {
+                    opacity: 1;
+                    transition: all .4s;
+                    transition-delay: .1s;
+                    transform: rotateY(0deg);
+                  }
+                }
+                > figcaption {
+                  position: absolute;
+                  z-index: 1;
+                  font-size: 13px;
+                  text-align: center;
+                  letter-spacing: 1px;
+                  text-shadow: 0px 0px 5px #7C7C7C;
+                  transform: rotateY(240deg);
+                  opacity: 0;
+                  
+                  > span:first-of-type {
+                    font-size: 15px;
+                    font-weight: bold;
+                  }
+                }
+                > div {
+                  position: absolute;
+                  z-index: 0;
+                  left: 0px;
+                  top: 0px;
+                  width: 0%;
+                  height: 100%;
+                  background-color: #F6B930;
+                  transition: all .2s;
+                }
+              }
+            }
           }
         }
       }
