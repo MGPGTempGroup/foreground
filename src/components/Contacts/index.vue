@@ -33,6 +33,7 @@ export default {
 
 <style scoped lang="scss" >
   .contact-list {
+    padding-bottom: 5px;
     h4 {
       font-size: 14.5px;
     }
