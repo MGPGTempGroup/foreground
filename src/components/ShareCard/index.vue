@@ -40,12 +40,10 @@ export default {
     text-decoration: none;
   }
   .shareCard-list {
-    &-item:first-of-type ~ &-item {
-      margin-left: 20px;
-    }
     &-item {
       display: inline-block;
       margin-top: 4.5px;
+      margin-right: 20px;
       width: auto;
       font-size: 17px;
       transition: all .3s;

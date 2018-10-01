@@ -85,18 +85,18 @@
 	.renting {
 		.content {
 			margin-top: 35px;
-
 			@include media-md {
 				margin-top: 30px;
 			}
-
 			@include media-sm {
 				margin-top: 20px;
 			}
-
 			@include media-xs {
 				margin-top: 10px;
 				padding: 0 10px;
+			}
+			@include media-custom(null, 1260px) {
+				padding: 0px 10px;
 			}
 		}
 

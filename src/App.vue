@@ -206,6 +206,7 @@
 			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
 			opacity: .97;
 			@include media-md {
+				margin-top: 0px;
 				margin-bottom: 30px;
 			}
 			@include media-sm {

@@ -147,6 +147,9 @@ export default {
     .hd-agent-list {
       &-item {
         margin-top: 20px;
+        &:first-of-type ~ .hd-agent-list-item {
+          margin-top: 32px;
+        }
       }
     }
   }

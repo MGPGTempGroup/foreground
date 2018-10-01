@@ -37,11 +37,15 @@
         </div>
         <div :span="2" class="inner-mobile-top-right" >
           <div @click="displayMobileNav = !displayMobileNav" class="inner-mobile-top-right-menu">
-            <img src="@/assets/images/icon/menu.svg" alt="">
+            <figure :class="{ 'inner-mobile-top-right-menu-figure-active': displayMobileNav }" >
+              <div></div>
+              <div></div>
+              <div></div>
+            </figure>
           </div>
         </div>
       </div>
-      <navigation class="inner-mobile-nav" :show="displayMobileNav" mode="vertical" />
+      <navigation class="inner-mobile-nav" :show.sync="displayMobileNav" mode="vertical" />
     </div>
 
   </el-header>
@@ -189,8 +193,9 @@
       }
     }
     .inner-mobile {
-      padding: 10px 0px;
+      padding: 10px 0px 4px 0px;
       background-color: #2C2C2C;
+      box-shadow: 0px 15px 5px #000;
       &-top {
         position: relative;
         padding: 0px 0px;
@@ -230,13 +235,33 @@
             display: flex;
             display: -webkit-flex;
             align-items: center;
-            transform: scale(1,1);
-            @include transitionAll;
-            &:active {
-              transform: scale(0.8, 0.8);
+            width: 27px;
+            height: 27px;
+            > figure {
+              width: 100%;
+              height: 100%;
+              > div {
+                margin-top: 5px;
+                width: 100%;
+                height: 4px;
+                border-radius: 10px;
+                background-color: #E5E5E5;
+                transition: all .3s;
+              }
             }
-            img {
-              height: 35px;
+            > figure[class*="figure-active"] {
+              > div:first-of-type, > div:last-of-type {
+
+              }
+              > div:first-of-type {
+                transform: translateY(9px) rotate(45deg);
+              }
+              > div:last-of-type {
+                transform: translateY(-9px) rotate(-45deg);
+              }
+              > div:nth-of-type(2) {
+                opacity: 0;
+              }
             }
           }
         }

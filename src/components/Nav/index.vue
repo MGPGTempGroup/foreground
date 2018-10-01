@@ -1,14 +1,20 @@
 <template>
 	<nav v-show="show" class="container">
-		<el-menu :default-active="activeIndex" class="el-menu-container" :mode="mode || 'vertical'" @select="handleSelect"
-		 background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+		<el-menu
+			:unique-opened="true"
+			:default-active="activeIndex"
+			class="el-menu-container"
+			:mode="mode || 'vertical'"
+			@select="handleSelect"
+		 	background-color="#545c64"
+			text-color="#fff"
+			active-text-color="#ffd04b">
 			<el-submenu href="//www.baidu.com" index="1">
 				<template slot="title"> Property Management </template>
 				<el-menu-item index="1-1">
-					<router-link tag="li" to="/landlords"> Landlords </router-link>
-				</el-menu-item>
-				<el-menu-item index="1-2">
-					<router-link tag="li" to="/login"> Members Login </router-link>
+					<router-link tag="li" to="/landlords">
+						Landlords
+					</router-link>
 				</el-menu-item>
 				<el-menu-item index="1-3">
 					<router-link tag="li" to="/prospective-tenants"> Prospective Tenants </router-link>
@@ -86,7 +92,8 @@
 			show: {
 				type: Boolean,
 				defaults: true
-			}
+			},
+			'background-color': {},
 		},
 		data() {
 			return {
@@ -95,7 +102,13 @@
 		},
 		methods: {
 			handleSelect(key, keyPath) {
-				//	console.log(key, keyPath);
+				// 是否移动端导航
+				if (this.mode == 'vertical') {
+					// 收起
+					setTimeout(() => {
+						this.$emit('update:show', false)
+					}, 200)
+				}
 			}
 		}
 	}
