@@ -2,7 +2,7 @@
 	<main class="home">
 		<main-swiper></main-swiper>
 		<div class="content">
-			<el-row gutter='20'>
+			<el-row :gutter="20">
 				<main-box v-for="(item,index) in 9" :key="index"></main-box>
 			</el-row>
 		</div>

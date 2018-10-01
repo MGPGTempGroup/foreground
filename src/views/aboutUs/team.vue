@@ -7,7 +7,7 @@
 			<div class="title">
 				Corporate
 			</div>
-			<el-row gutter='20'>
+			<el-row :gutter="20">
 				<staff-box to="/about-us-team/Ann Rogers" v-for="(item,index) in 5" :key="index"></staff-box>
 			</el-row>
 		</div>

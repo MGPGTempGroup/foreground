@@ -2,7 +2,7 @@
 	<main class="buy-residential">
 		<main-swiper></main-swiper>
 		<div class="content">
-			<el-row gutter='20'>
+			<el-row :gutter="20">
 				<el-col :sm="12" :md="8" :lg="8" class="search">
 					<div class="main">
 						<div class="title">

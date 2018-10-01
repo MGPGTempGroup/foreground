@@ -1,8 +1,8 @@
 <template>
 	<main class="container">
-		<top-info img="https://www.melbournerealestate.com.au/wp-content/uploads/2015/09/External-V1_View-from-Dyer-Lane-Copy.jpg"></top-info>
+		<main-swiper></main-swiper>
 		<div class="content">
-			<el-row gutter='20'>
+			<el-row :gutter="20">
 				<main-box to="/new-developments/little-oxford" v-for="(item,index) in 9" :key="index"></main-box>
 			</el-row>
 			<div class="load-more">Load More</div>
@@ -13,10 +13,12 @@
 <script>
 	import TopInfo from '@/components/TopInfo'
 	import MainBox from '@/components/MainBox'
+	import MainSwiper from '@/components/MainSwiper'
 	export default {
 		components: {
 			TopInfo,
-			MainBox
+			MainBox,
+			MainSwiper
 		},
 		name: 'new-developments-page'
 	}
@@ -29,15 +31,12 @@
 		padding-bottom: 20px;
 		.content {
 			margin-top: 35px;
-
 			@include media-md {
 				margin-top: 30px;
 			}
-
 			@include media-sm {
 				margin-top: 20px;
 			}
-
 			@include media-xs {
 				margin-top: 10px;
 				padding: 0 10px;

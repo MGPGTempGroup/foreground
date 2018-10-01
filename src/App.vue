@@ -20,7 +20,8 @@
 				<i class="el-icon-arrow-up"></i>
 			</div>
 			<!-- 背景（filter） -->
-			<img class="bg recovery" src="/images/background/爱西西_高层建筑背景下水船_编号234127.jpg" alt="">
+			<img class="hidden-md-and-up bg recovery" src="/images/background/418abed69fb6f3e6b9344cb8d5dbf31e.jpg" alt="">
+			<img class="hidden-sm-and-down bg recovery" src="/images/background/爱西西_高层建筑背景下水船_编号234127.jpg" alt="">
 		</div>
 
 		<!-- 登录 Dialog -->
@@ -204,7 +205,6 @@
 			padding-bottom: .6rem;
 			max-width: 1200px;
 			min-height: calc(100vh - 155.33px - 60px - 35px - 458px);
-			opacity: .97;
 			@include media-md {
 				margin-top: 0px;
 				margin-bottom: 30px;
