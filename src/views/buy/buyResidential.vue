@@ -94,6 +94,7 @@
 			.main {
 				min-height: 400px;
 				padding: 0;
+				padding-top: 10px;
 				background: #fff;
 
 				.title {

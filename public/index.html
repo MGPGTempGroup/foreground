@@ -8,6 +8,13 @@
     <meta name="description" content="Melbourne Grand Property Group" >
     <meta name="keywords" content="Property,Grand,Management,hotel" >
 
+    <script>
+      // 是否未访问过introduction页面
+      if (! localStorage.getItem('is_visited_intro')) {
+        window.location.href='introduction.html'
+      }
+    </script>
+
     <!-- rem -->
     <script src="/js/rem.js" ></script>
 

@@ -2,10 +2,14 @@ import Vue from 'vue';
 import router from './router'
 import App from './App.vue'
 
+// 样式重置SCSS
 import '@/assets/sass/reset.scss'
+
+// ElementUI 主题 CSS
 import '../theme/index.css'
 
-import 'velocity-animate' //引入velocity动画
+// velocity动画
+import 'velocity-animate'
 
 new Vue({
   el: '#app',

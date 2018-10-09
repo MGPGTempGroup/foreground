@@ -2,7 +2,7 @@
 	<el-col :sm="12" :md="8" :lg="8" class="container">
 		<el-card class="main" body-style="padding: 5px;" shadow="hover">
 			<div class="head">
-				<div class="title">Title</div>
+				<div class="title">{{ title }}</div>
 				<el-popover placement="bottom-end" trigger="hover" style="width: 100px;">
 					<ul class="share-box">
 						<font class="title">share</font>
@@ -25,7 +25,7 @@
 			<router-link :to="to" >
 				<div class="main">
 					<div class="img-box">
-						<img src="https://www.melbournerealestate.com.au/wp-content/uploads/2018/05/White-St-Thumbnail-640x462.jpg">
+						<img :src="imgUrl">
 					</div>
 				</div>
 				<div class="foot">
@@ -45,6 +45,14 @@
 				type: String,
 				default: '/'	
 			},
+			title: {
+				type: String,
+				default: 'Title'
+			},
+			imgUrl: {
+				type: String,
+				default: 'https://www.melbournerealestate.com.au/wp-content/uploads/2018/05/White-St-Thumbnail-640x462.jpg'
+			}
 		},
 		data() {
 			return {
@@ -80,6 +88,7 @@
 				.title {
 					line-height: 40px;
 					font-size: 14px;
+					font-weight: bold;
 				}
 
 				.el-icon-more {

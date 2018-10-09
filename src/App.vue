@@ -9,7 +9,10 @@
 		<!-- 轮播公告信息 -->
 		<notice-marquee :list="noticeList" />
 
-		<router-view class="router-view" />
+		<!-- router-view -->
+		<transition @after-enter="routerViewAfterEnter" name="router-view" >
+			<router-view class="router-view" />
+		</transition>
 
 		<!-- 底部介绍与版权相关信息 -->
 		<bottom-footer />
@@ -20,8 +23,8 @@
 				<i class="el-icon-arrow-up"></i>
 			</div>
 			<!-- 背景（filter） -->
-			<img class="hidden-md-and-up bg recovery" src="/images/background/418abed69fb6f3e6b9344cb8d5dbf31e.jpg" alt="">
-			<img class="hidden-sm-and-down bg recovery" src="/images/background/爱西西_高层建筑背景下水船_编号234127.jpg" alt="">
+			<img class="hidden-md-and-up bg recovery mobile" src="/images/background/418abed69fb6f3e6b9344cb8d5dbf31e.jpg" alt="">
+			<img class="hidden-sm-and-down bg recovery pc" src="/images/background/爱西西_高层建筑背景下水船_编号234127.jpg" alt="">
 		</div>
 
 		<!-- 登录 Dialog -->
@@ -157,6 +160,13 @@
 						bottom: -100
 					})
 				}
+			},
+			routerViewAfterEnter() {
+				let bgDOM = document.querySelector('.pc')
+				bgDOM.classList.remove('recovery')
+				setTimeout(() => {
+					bgDOM.classList.add('recovery')
+				}, 0)
 			}
 		},
 		created() {
@@ -198,7 +208,7 @@
 			@include transitionAll;
 		}
 		.recovery {
-			animation: recovery 1.5s forwards;
+			animation: recovery .8s forwards;
 		}
 		.router-view {
 			margin: 35px auto;
@@ -218,6 +228,7 @@
 				margin-bottom: 20px;
 			}
 		}
+
 		.to-top {
 			position: fixed;
 			bottom: -100px;

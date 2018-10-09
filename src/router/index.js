@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+// Home页
 import home from '@/views/home'
-import awagegedemo from '@/views/awagegedemo'
 
 // 物业管理服务相关页面
 import landlords from '@/views/property/landlords'
@@ -49,10 +49,17 @@ import industryUpdatesDetails from '@/views/industryUpdates/details'
 import weSpeakYourlanguage from '@/views/weSpeakYourlanguage'
 
 Vue.use(Router)
+
 export default new Router({
 	mode: 'history',
-	routes: [{
+	routes: [
+		{
 			path: '/',
+			name: 'home',
+			component: home
+		},
+		{
+			path: '/home',
 			name: 'home',
 			component: home
 		},
@@ -173,11 +180,6 @@ export default new Router({
 			path: '/we-speak-your-language',
 			name: 'weSpeakYourlanguage',
 			component: weSpeakYourlanguage
-		},
-		{
-			path: '/awagegedemo',
-			name: 'awagegedemo',
-			component: awagegedemo
 		}
 	]
 })

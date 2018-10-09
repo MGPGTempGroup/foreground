@@ -3,7 +3,7 @@
     <div class="inner-pc hidden-md-and-down" >
       <div class="inner-pc-top" >
         <div class="inner-pc-top-left" >
-          <router-link to="/" >
+          <router-link to="/home" >
             <img class="inner-pc-top-left-logo" src="@/assets/images/logo/logo_widthplus_transparent.png" alt="">
           </router-link>
         </div>

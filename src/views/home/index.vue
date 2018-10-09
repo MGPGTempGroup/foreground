@@ -3,7 +3,15 @@
 		<main-swiper></main-swiper>
 		<div class="content">
 			<el-row :gutter="20">
-				<main-box v-for="(item,index) in 9" :key="index"></main-box>
+				<main-box title="Looking to Buy?" to="/buy-residential" />
+				<main-box title="Looking to Rent?" to="/renting" />
+				<main-box title="New Development" to="/new-developments" />
+				<main-box title="Contacts Us" to="/contact-us" />
+				<main-box title="Testimonials" to="/about-us-testimonials" />
+				<main-box title="MGPG Headquarters" to="/about-us-headoffice" />
+				<main-box title="Team" to="/about-us-team" />
+				<main-box title="Careers" to="/about-us-careers" />
+				<main-box title="About Us" />
 			</el-row>
 		</div>
 	</main>
