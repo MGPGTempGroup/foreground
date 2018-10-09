@@ -195,9 +195,6 @@
           </div>
         </div>
       </swiper-slide>
-      <swiper-slide class="intro-swiper-section intro-swiper-section-5">
-        <h1>Two</h1>
-      </swiper-slide>
     </swiper>
     <div class="down-arrow" >
       <img src="/images/icon/down-arrow.svg" alt="">
@@ -289,7 +286,7 @@
     color: white;
     text-shadow: 0px 0px 10px #292929;
     // background-image: url('/images/background/introduction/16pic_7044135_796f9d8e.jpg');
-    background-image: url('/images/background/introduction/16pic_7044135_796f9d8e.jpg');
+    background-image: url('/images/background/desk-light-wood-meeting-ceiling-decoration-790647-pxhere.com.jpg');
     background-size: cover;
     &-section {
       position: relative;
