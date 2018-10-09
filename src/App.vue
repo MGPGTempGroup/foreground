@@ -145,20 +145,12 @@
 				Velocity(document.body, "scroll")
 			},
 			scroll() {
-				//console.log(this.$refs.toTop.style.bottom)
-				if (this.$refs.toTop.style.bottom != '100px' && this.$refs.toTop.style.bottom != '-100px' && this.$refs.toTop.style
-					.bottom != '') {
-					return false
-				}
-				Velocity(this.$refs.toTop, "stop")
+				const el = this.$refs.toTop
+				// 控制是否显示回到顶部按钮
 				if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-					Velocity(this.$refs.toTop, {
-						bottom: 100
-					})
+					el.style.cssText = 'bottom: 100px; opacity: 1;'
 				} else {
-					Velocity(this.$refs.toTop, {
-						bottom: -100
-					})
+					el.style.cssText = ''
 				}
 			},
 			routerViewAfterEnter() {
@@ -242,6 +234,8 @@
 			box-shadow: 0px 0px 10px #ccc;
 			z-index: 1000;
 			color: #fff;
+			opacity: 0;
+			transition: all .3s;
 		}
 	}
 </style>
