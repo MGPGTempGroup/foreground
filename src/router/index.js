@@ -1,52 +1,52 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// Home页
-import home from '@/views/home'
+// Home
+const home = () => import('@/views/home')
 
-// 物业管理服务相关页面
-import landlords from '@/views/property/landlords'
-import prospectiveTenants from '@/views/property/prospectiveTenants'
-import currentTenants from '@/views/property/currentTenants'
-import areasWeServe from '@/views/property/areasWeServe'
-import areasDetail from '@/views/property/areasDetail'
+// 物业管理服务相关
+const landlords = () => import('@/views/property/landlords')
+const prospectiveTenants = () => import('@/views/property/prospectiveTenants')
+const currentTenants = () => import('@/views/property/currentTenants')
+const areasWeServe = () => import('@/views/property/areasWeServe')
+const areasDetail = () => import('@/views/property/areasDetail')
 
 // 方案/项目相关页面
-import marketing from '@/views/projects/marketing'
-import leasing from '@/views/projects/leasing'
-import success from '@/views/projects/success'
+const marketing = () => import('@/views/projects/marketing')
+const leasing = () => import('@/views/projects/leasing')
+const success = () => import('@/views/projects/success')
 
 // 购买
-import newDevelopments from '@/views/buy/newDevelopments'
-import buyResidential from '@/views/buy/buyResidential'
-import residentialDetail from '@/views/buy/residentialDetail'
-import newDevelopmentsDetail from '@/views/buy/newDevelopmentsDetail'
+const newDevelopments = () => import('@/views/buy/newDevelopments')
+const buyResidential = () => import('@/views/buy/buyResidential')
+const residentialDetail = () => import('@/views/buy/residentialDetail')
+const newDevelopmentsDetail = () => import('@/views/buy/newDevelopmentsDetail')
 
 // 租房
-import renting from '@/views/rent'
+const renting = () => import('@/views/rent')
 
 // 出售
-import selling from '@/views/sell'
+const selling = () => import('@/views/sell')
 
 // 商业/广告相关页面
-import commercial from '@/views/commercial'
+const commercial = () => import('@/views/commercial')
 
 // 联系我们页面
-import contactUs from '@/views/contactUs'
+const contactUs = () => import('@/views/contactUs')
 
 // 关于我们相关页面
-import headoffice from '@/views/aboutUs/headoffice'
-import careers from '@/views/aboutUs/careers'
-import team from '@/views/aboutUs/team'
-import staffDetail from '@/views/aboutUs/staffDetail'
-import testimonials from '@/views/aboutUs/testimonials'
+const headoffice = () => import('@/views/aboutUs/headoffice')
+const careers = () => import('@/views/aboutUs/headoffice')
+const team = () => import('@/views/aboutUs/team')
+const staffDetail = () => import('@/views/aboutUs/staffDetail')
+const testimonials = () => import('@/views/aboutUs/testimonials')
 
 // 更新/升级
-import industryUpdates from '@/views/industryUpdates'
-import industryUpdatesDetails from '@/views/industryUpdates/details'
+const industryUpdates = () => import('@/views/industryUpdates')
+const industryUpdatesDetails = () => import('@/views/industryUpdates/details')
 
 //用您的语言进行交流
-import weSpeakYourlanguage from '@/views/weSpeakYourlanguage'
+const weSpeakYourlanguage = () => import('@/views/weSpeakYourlanguage')
 
 Vue.use(Router)
 
