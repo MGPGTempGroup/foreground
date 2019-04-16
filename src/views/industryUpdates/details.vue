@@ -37,6 +37,8 @@
   .industry-updates-details {
     &__head-map {
       position: relative;
+      min-height: 400px;
+      background-color: rgba(0,0,0,.9);
       &-title {
         position: absolute;
         top: 45%;
