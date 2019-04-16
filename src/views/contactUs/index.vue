@@ -1,7 +1,7 @@
 <template>
   <main class="contact-us" >
     <div class="contact-us-map" >
-      <div ref="googleMap" style="width: 100%; height: 500px;" class="google-map" ></div>
+      <iframe src="http://www.google.cn/maps/embed?pb=!1m18!1m12!1m3!1d3057.0968879473744!2d117.08853231563943!3d39.983940089770215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f17c7cd6160c41%3A0x8e50dec35bfc0b57!2z5Lic5pa55bCP5Yy65Lic!5e0!3m2!1szh-CN!2scn!4v1555424865879!5m2!1szh-CN!2scn" width="1200" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <el-row class="content">
       <el-col class="contact-us-content" :lg="18" >
